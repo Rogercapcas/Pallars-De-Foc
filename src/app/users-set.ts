@@ -1,4 +1,4 @@
-import {User} from './user';
+import { User } from './user';
 
 export const USERS: User[] = [
   {id: 1, name: 'Roger', surname: 'Capdevila', superuser: true, email: 'rogercapcas@gmail.com', phone_number: 666737461},
