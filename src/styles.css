@@ -5,10 +5,18 @@ h1{
   font-size: 250%;
 }
 
-h2, h3{
+h2{
   color: #444;
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: lighter;
+  font-size: 170%;
+  font-weight: bold;
+}
+
+h3{
+  color: #333;
+  font-family: Arial;
+  font-size: 110%;
+  font-weight: bold;
 }
 
 body{
@@ -22,5 +30,5 @@ body, input[type="text"], button {
 
 /*everywhere else*/
 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Helvetica;
 }
