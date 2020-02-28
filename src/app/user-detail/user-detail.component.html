@@ -1,1 +1,15 @@
-<p>user-detail works!</p>
+<div *ngIf="user">
+
+  <h2>Informació sobre l'usuari {{user.name}} {{user.surname}} </h2>
+  <div>
+    <label>Correu elctrònic:
+      {{user.email}}
+    </label>
+  </div>
+  <div>
+    <label>Telèfon:
+      {{user.phone_number}}
+    </label>
+  </div>
+
+</div>
