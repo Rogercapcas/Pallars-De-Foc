@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { User } from './user';
+import { User } from './users/user';
 import { USERS } from './users-set';
 
 

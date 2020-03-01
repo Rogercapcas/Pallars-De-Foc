@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../user';
+import { User } from './user';
 import {UserService} from '../user.service';
 
 @Component({
@@ -22,9 +22,7 @@ export class UsersComponent implements OnInit {
     this.selectedUser = user;
   }
 
-  getUsers(): void{
+  getUsers(): void {
     this.users = this.userService.getUsers();
   }
 }
-
-
