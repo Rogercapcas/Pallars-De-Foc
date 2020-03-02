@@ -1,12 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { LoginPageComponent } from './login-page/login-page.component';
-import { BudgetComponent } from './budget/budget.component';
-import { UsersComponent } from './users/users.component';
+import { LoginPageComponent } from './components/login-page/login-page.component';
+import { BudgetComponent } from './components/budget/budget.component';
+import { UsersComponent } from './components/users/users.component';
 import { FormsModule } from '@angular/forms';
-import { UserDetailComponent } from './user-detail/user-detail.component';
+import { UserDetailComponent } from './components/user-detail/user-detail.component';
+import {AppRoutingModule} from './app-routing.module';
+import { AppBaseComponent } from './components/app-base/app-base.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +17,14 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     LoginPageComponent,
     BudgetComponent,
     UsersComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    AppBaseComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
