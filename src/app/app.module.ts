@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
 import {AppRoutingModule} from './app-routing.module';
 import { AppBaseComponent } from './components/app-base/app-base.component';
+import { IndexComponent } from './components/index/index.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AppBaseComponent } from './components/app-base/app-base.component';
     BudgetComponent,
     UsersComponent,
     UserDetailComponent,
-    AppBaseComponent
+    AppBaseComponent,
+    IndexComponent
   ],
   imports: [
     BrowserModule,
