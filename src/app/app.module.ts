@@ -11,6 +11,7 @@ import { UserDetailComponent } from './components/user-detail/user-detail.compon
 import {AppRoutingModule} from './app-routing.module';
 import { AppBaseComponent } from './components/app-base/app-base.component';
 import { IndexComponent } from './components/index/index.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { IndexComponent } from './components/index/index.component';
     UsersComponent,
     UserDetailComponent,
     AppBaseComponent,
-    IndexComponent
+    IndexComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
