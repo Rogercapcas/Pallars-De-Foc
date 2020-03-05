@@ -12,5 +12,5 @@ export class UserService {
 
   getUsers(): User[] {
     return USERS;
-}
+  }
 }

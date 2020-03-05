@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Edition} from '../../models/edition';
+import { Edition } from '../../models/edition';
+import { EditionsSService } from '../../editions-s.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -10,9 +11,17 @@ export class SidebarComponent implements OnInit {
   editions: Edition[];
   selectedEdition: Edition;
 
-  constructor() { }
+  constructor(private editionsSService: EditionsSService) { }
 
   ngOnInit(): void {
+    this.getEditions();
+  }
+
+  onSelect(edition: Edition) {
+    this.selectedEdition = edition;
+  }
+  getEditions(): void {
+    this.editions = this.editionsSService.getEditions();
   }
 
 }
