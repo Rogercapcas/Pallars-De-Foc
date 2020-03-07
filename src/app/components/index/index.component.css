@@ -1,4 +1,32 @@
 h2{
   font-size: large;
-  font-family: "Arial Black", fantasy;
+  font-family: fantasy;
+  font-weight: bold;
+  color: #810e05;
+  font-style: oblique;
+}
+
+
+
+.myButton {
+  box-shadow: 0px 10px 14px -7px #f5978e;
+  background: #f24537 linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+  border-radius:4px;
+  border:1px solid #d02718;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family: Arial, serif;
+  font-size:13px;
+  font-weight:bold;
+  padding:6px 12px;
+  text-decoration:none;
+  text-shadow:0 1px 0 #810e05;
+                                    }
+.myButton:hover {
+  background: #c62d1f linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+}
+.myButton:active {
+  position:relative;
+  top:1px;
 }

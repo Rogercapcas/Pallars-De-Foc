@@ -4,7 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
-import { BudgetComponent } from './components/budget/budget.component';
+import { BudgetsComponent } from './components/budgets/budgets.component';
 import { UsersComponent } from './components/users/users.component';
 import { FormsModule } from '@angular/forms';
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
@@ -17,7 +17,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
   declarations: [
     AppComponent,
     LoginPageComponent,
-    BudgetComponent,
+    BudgetsComponent,
     UsersComponent,
     UserDetailComponent,
     AppBaseComponent,
