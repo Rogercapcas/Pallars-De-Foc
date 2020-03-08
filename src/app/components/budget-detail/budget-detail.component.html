@@ -1,0 +1,17 @@
+<h1> Pressupost: {{budget.name}}, edició {{budget.edition.year}} </h1>
+
+<p>-----------------------------------------------------------</p>
+<div>
+  <h2> Ingressos</h2>
+  <li *ngFor="let concept of budget.income_concepts">
+    {{budget.income_concepts[0]}} ----> {{budget.income_concepts[1]}}
+  </li>
+</div>
+
+<div>
+  <h2> Despeses</h2>
+  <li *ngFor="let concept of budget.outcome_concepts">
+    {{budget.income_concepts[0]}} ----> {{budget.income_concepts[1]}}
+  </li>
+</div>
+<p>Total pressupost: {{budget.total_ammount}}</p>

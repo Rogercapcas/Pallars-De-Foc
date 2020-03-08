@@ -12,6 +12,7 @@ import {AppRoutingModule} from './app-routing.module';
 import { AppBaseComponent } from './components/app-base/app-base.component';
 import { IndexComponent } from './components/index/index.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { BudgetDetailComponent } from './components/budget-detail/budget-detail.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
     UserDetailComponent,
     AppBaseComponent,
     IndexComponent,
-    SidebarComponent
+    SidebarComponent,
+    BudgetDetailComponent
   ],
   imports: [
     BrowserModule,
