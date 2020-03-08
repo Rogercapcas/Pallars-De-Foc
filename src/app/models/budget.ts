@@ -3,7 +3,7 @@ import { Edition } from './edition';
 export interface Budget {
   name: string;
   edition: Edition;
-  income_concepts: [string, number][];
-  outcome_concepts: [string, number][];
+  concepts: [boolean, string, number][]; /* [income, concept, ammount in €] */
   total_ammount: number;
+  comments: string;
 }

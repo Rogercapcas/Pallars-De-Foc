@@ -9,5 +9,6 @@ export interface Bill {
   concept: string;
   total_bt: number; /*Total Before Taxes*/
   taxes: number;
-  outcome: boolean;
+  income: boolean;
+  comments: string;
 }

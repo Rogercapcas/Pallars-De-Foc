@@ -8,7 +8,7 @@ import { Edition } from './models/edition';
 export class BudgetService {
   private BUDGETS: Budget[];
 
-  constructor(private edition: Edition) {
+  constructor() {
 
   }
 

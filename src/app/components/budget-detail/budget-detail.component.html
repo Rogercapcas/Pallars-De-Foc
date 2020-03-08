@@ -3,15 +3,15 @@
 <p>-----------------------------------------------------------</p>
 <div>
   <h2> Ingressos</h2>
-  <li *ngFor="let concept of budget.income_concepts">
-    {{budget.income_concepts[0]}} ----> {{budget.income_concepts[1]}}
+  <li *ngFor="let concept of budget.concepts">
+    <span *ngIf="concept[0]"> {{budget.concepts[1]}} ----> {{budget.concepts[2]}}</span>
   </li>
 </div>
 
 <div>
   <h2> Despeses</h2>
-  <li *ngFor="let concept of budget.outcome_concepts">
-    {{budget.income_concepts[0]}} ----> {{budget.income_concepts[1]}}
+  <li *ngFor="let concept of budget.concepts">
+    <span *ngIf="!concept[0]"> {{budget.concepts[1]}} ----> {{budget.concepts[2]}}</span>
   </li>
 </div>
 <h2>Total pressupost: {{budget.total_ammount}}</h2>

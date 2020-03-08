@@ -8,7 +8,7 @@ import { Edition } from './models/edition';
 export class BillService {
   private BILLS: Bill[];
 
-  constructor(private edition: Edition) { }
+  constructor() { }
 
   getBills(): Bill[] {
     return this.BILLS;
