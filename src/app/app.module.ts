@@ -13,6 +13,7 @@ import { AppBaseComponent } from './components/app-base/app-base.component';
 import { IndexComponent } from './components/index/index.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { BudgetDetailComponent } from './components/budget-detail/budget-detail.component';
+import { BillsComponent } from './components/bills/bills.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { BudgetDetailComponent } from './components/budget-detail/budget-detail.
     AppBaseComponent,
     IndexComponent,
     SidebarComponent,
-    BudgetDetailComponent
+    BudgetDetailComponent,
+    BillsComponent
   ],
   imports: [
     BrowserModule,
