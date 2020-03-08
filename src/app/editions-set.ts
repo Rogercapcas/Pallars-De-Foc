@@ -1,6 +1,5 @@
 import { Edition } from './models/edition';
-import { User } from './models/user';
-import {USERS} from './users-set';
+import { USERS } from './users-set';
 
 export let EDITIONS: Edition[];
 EDITIONS = [

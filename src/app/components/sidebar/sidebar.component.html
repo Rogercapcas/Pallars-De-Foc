@@ -3,6 +3,6 @@
 <li *ngFor="let edition of editions"
     [class.selected]="edition ===selectedEdition"
     (click)="onSelect(edition)">
-  <span class="badge"><h2>{{edition.name}} </h2> <h3>edició ( {{edition.year}} )</h3></span>
+  <span class="badge">{{edition.name}}  edició ( {{edition.year}} )</span>
 </li>
 </body>
