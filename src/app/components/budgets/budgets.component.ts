@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Budget } from '../../models/budget';
-import {b}
+import { BudgetService } from '../../budget.service';
 
 @Component({
   selector: 'app-budgets',
@@ -14,7 +14,7 @@ export class BudgetsComponent implements OnInit {
   constructor(private budgetService: BudgetService) { }
 
   ngOnInit(): void {
-    this.getBudgets()
+    this.getBudgets();
   }
 
   onSelect(budget: Budget): void {
