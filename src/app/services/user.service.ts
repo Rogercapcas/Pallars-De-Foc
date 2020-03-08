@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { User } from './models/user';
-import { USERS } from './users-set';
+import { User } from '../models/user';
+import { USERS } from '../users-set';
 
 
 @Injectable({

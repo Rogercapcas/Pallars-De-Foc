@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Bill } from '../../models/bill';
-import { BillService } from '../../bill.service';
+import { BillService } from '../../services/bill.service';
 
 @Component({
   selector: 'app-bills',
@@ -20,7 +20,7 @@ export class BillsComponent implements OnInit {
     this.selectedBill = bill;
   }
 
-  getBills(): void{
+  getBills(): void {
     this.bills = this.billService.getBills();
 }
 

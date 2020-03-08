@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Edition } from '../../models/edition';
-import { EditionsSService } from '../../editions-s.service';
+import { EditionsSService } from '../../services/editions-s.service';
 
 @Component({
   selector: 'app-sidebar',

@@ -14,6 +14,7 @@ import { IndexComponent } from './components/index/index.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { BudgetDetailComponent } from './components/budget-detail/budget-detail.component';
 import { BillsComponent } from './components/bills/bills.component';
+import { BillDetailComponent } from './components/bill-detail/bill-detail.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { BillsComponent } from './components/bills/bills.component';
     IndexComponent,
     SidebarComponent,
     BudgetDetailComponent,
-    BillsComponent
+    BillsComponent,
+    BillDetailComponent
   ],
   imports: [
     BrowserModule,
