@@ -2,6 +2,7 @@ import { Organization } from './organization';
 import { Edition } from './edition';
 
 export interface Bill {
+  bill_number: number;
   edition: Edition;
   date: Date;
   from: Organization;

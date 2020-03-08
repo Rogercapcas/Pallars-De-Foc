@@ -1,1 +1,10 @@
-<p>bill-detail works!</p>
+<h1>Factura nº: {{bill.bill_number}}</h1>
+<p>-----------------------------------</p>
+<li>Data: {{bill.date}}</li>
+<li>Emesa per: {{bill.from.name}}</li>
+<li>Dirigida a: {{bill.to.name}}</li>
+<li>Concepte: {{bill.concept}}</li>
+<li>Import: {{bill.total_bt}}</li>
+<li>IVA: {{bill.taxes}}</li>
+<p>Comentaris: {{bill.comments}}</p>
+
