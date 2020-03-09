@@ -8,7 +8,7 @@ import { BudgetsComponent } from './components/budgets/budgets.component';
 import { UsersComponent } from './components/users/users.component';
 import { FormsModule } from '@angular/forms';
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
-import {AppRoutingModule} from './app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { AppBaseComponent } from './components/app-base/app-base.component';
 import { IndexComponent } from './components/index/index.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';

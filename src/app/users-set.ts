@@ -1,7 +1,7 @@
 import { User } from './models/user';
 
 export const USERS: User[] = [
-  {id: 1, name: 'Roger', surname: 'Capdevila', superuser: true, email: 'rogercapcas@gmail.com', phone_number: 666737461},
-  {id: 2, name: 'Guillem', surname: 'Pedra', phone_number: 689077473, email: 'gpedra@totook.es', superuser: true},
-  {id: 3, name: 'Jaume', surname: 'Gelonch', phone_number: 612345678, email: 'jaumedelaventa@gmail.com', superuser: false}
+  new User(1, 'Roger', 'Capdevila', true, 'rogercapcas@gmail.com', 666737461),
+  new User(2, 'Guillem', 'Pedra', true, 'gpedra@totook.es', 689077473),
+  new User(3, 'Jaume', 'Gelonch', false, 'jaumedelaventa@gmail.com', 612345678)
 ];
