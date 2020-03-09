@@ -4,14 +4,14 @@
 <div>
   <h2> Ingressos</h2>
   <li *ngFor="let concept of budget.concepts">
-    <span *ngIf="concept[0]"> {{budget.concepts[1]}} ----> {{budget.concepts[2]}}</span>
+    <span *ngIf="concept[0]"> {{concept[1]}} ----> {{concept[2]}}</span>
   </li>
 </div>
 
 <div>
   <h2> Despeses</h2>
   <li *ngFor="let concept of budget.concepts">
-    <span *ngIf="!concept[0]"> {{budget.concepts[1]}} ----> {{budget.concepts[2]}}</span>
+    <span *ngIf="!concept[0]"> {{concept[1]}} ----> {{concept[2]}}</span>
   </li>
 </div>
 <h2>Total pressupost: {{budget.total_ammount}}</h2>
