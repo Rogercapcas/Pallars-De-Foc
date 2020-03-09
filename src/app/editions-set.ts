@@ -1,31 +1,8 @@
 import { Edition } from './models/edition';
 import { USERS } from './users-set';
 
-export let EDITIONS: Edition[];
-EDITIONS = [
-  {
-    year: 2019,
-    name: 'IV',
-    bar_managers: [USERS[1]],
-    bills_manager: [USERS[1], USERS[2]],
-    general_managers: [USERS[2]],
-    human_resources: [USERS[0]],
-    organizations_manager: []
-  },
-  {
-    year: 2020,
-    name: 'V',
-    bar_managers: [USERS[1]],
-    bills_manager: [USERS[1], USERS[2]],
-    general_managers: [USERS[1]],
-    human_resources: [USERS[0]],
-    organizations_manager: []
-  },
-  {year: 2021,
-    name: 'VI',
-    bar_managers: [USERS[1]],
-    bills_manager: [USERS[1], USERS[2]],
-    general_managers: [USERS[1]],
-    human_resources: [USERS[0]],
-    organizations_manager: []},
+export const EDITIONS: Edition[] = [
+  new Edition(2019, 'IV', [USERS[2]], [USERS[0]], [USERS[1], USERS[2]], [USERS[1]]),
+  new Edition(2020, 'V', [USERS[2]], [USERS[0]], [USERS[1], USERS[2]], [USERS[1]]),
+  new Edition(2021, 'VI', [USERS[2]], [USERS[0]], [USERS[1], USERS[2]], [USERS[1]])
 ];
