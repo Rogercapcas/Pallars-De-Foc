@@ -15,6 +15,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { BudgetDetailComponent } from './components/budget-detail/budget-detail.component';
 import { BillsComponent } from './components/bills/bills.component';
 import { BillDetailComponent } from './components/bill-detail/bill-detail.component';
+import { BillInputComponent } from './components/bill-input/bill-input.component';
+import { BudgetInputComponent } from './components/budget-input/budget-input.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { BillDetailComponent } from './components/bill-detail/bill-detail.compon
     SidebarComponent,
     BudgetDetailComponent,
     BillsComponent,
-    BillDetailComponent
+    BillDetailComponent,
+    BillInputComponent,
+    BudgetInputComponent
   ],
   imports: [
     BrowserModule,
