@@ -8,6 +8,6 @@ export class Organization {
   flor: number;
   door: string;
 
-  constructor() {
+  constructor(NIF: string) {
   }
 }
