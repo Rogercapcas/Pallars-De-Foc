@@ -1,4 +1,4 @@
-export interface Organization {
+export class Organization {
   NIF: string;
   name: string;
   postal_code: string;
@@ -7,4 +7,7 @@ export interface Organization {
   stair: string;
   flor: number;
   door: string;
+
+  constructor() {
+  }
 }
