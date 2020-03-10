@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Bill } from '../../models/bill';
 import {EDITIONS} from '../../editions-set';
-import {Edition} from '../../models/edition';
+import { Edition} from '../../models/edition';
 
 @Component({
   selector: 'app-bill-input',
