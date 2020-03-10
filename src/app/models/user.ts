@@ -1,6 +1,6 @@
 export class User {
-  public id: number;
-  public name: string;
+  id: number;
+  name: string;
   public surname: string;
   private superuser: boolean;
   public email: string;
