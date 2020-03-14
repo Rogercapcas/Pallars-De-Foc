@@ -1,5 +1,6 @@
 export class User {
   id: number;
+  password: string;
   name: string;
   public surname: string;
   private superuser: boolean;
