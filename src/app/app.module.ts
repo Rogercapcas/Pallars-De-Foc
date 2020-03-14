@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { BudgetsComponent } from './components/budgets/budgets.component';
 import { UsersComponent } from './components/users/users.component';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppBaseComponent } from './components/app-base/app-base.component';
@@ -39,6 +39,7 @@ import { BudgetInputComponent } from './components/budget-input/budget-input.com
     FormsModule,
     RouterModule,
     AppRoutingModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

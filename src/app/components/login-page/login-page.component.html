@@ -1,3 +1,28 @@
-<h1><p>Benvingut a la pàgina de log in del Pallars de Foc</p></h1>
-
-<div> Aquesta pàgina està en contrucció</div>
+<div class="col-md-6 offset-md-3 mt-5">
+  <div class="card">
+    <h4 class="card-header">Benvingut a la pàgina de log in del Pallars de Foc</h4>
+    <div class="card-body">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="id">Codi d'usuari</label>
+          <input type="text" formControlName="id" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.id.errors }" />
+          <div *ngIf="submitted && f.id.errors" class="invalid-feedback">
+            <div *ngIf="f.id.errors.required">Es necessita un codi d'usuari</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">Contrasenya</label>
+          <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+          <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Es necessita una contrasenya</div>
+          </div>
+        </div>
+        <button [disabled]="loading" class="btn btn-primary">
+          <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+          Entrar
+        </button>
+        <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+      </form>
+    </div>
+  </div>
+</div>
