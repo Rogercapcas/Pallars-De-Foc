@@ -5,6 +5,7 @@ export class User {
   private superuser: boolean;
   public email: string;
   public phoneNumber: number;
+  token?: any;
 
   constructor(
     id: number,

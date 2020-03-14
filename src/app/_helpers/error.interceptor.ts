@@ -5,6 +5,7 @@ import { catchError } from 'rxjs/operators';
 
 import { AuthenticationService } from '../services/authentication.service';
 
+// @ts-ignore
 @Injectable()
 
 export class ErrorInterceptor implements HttpInterceptor{
