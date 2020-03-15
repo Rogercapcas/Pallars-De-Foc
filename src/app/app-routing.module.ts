@@ -8,7 +8,8 @@ const routes: Routes = [
   {path : '', component: AppBaseComponent},
   {path: 'login', component: LoginPageComponent},
   {path: 'users', component: UsersComponent},
-  {path: 'index', component: IndexComponent}
+  {path: 'index', component: IndexComponent},
+  {path: '**', component: AppBaseComponent}
 ];
 
 // @ts-ignore
