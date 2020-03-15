@@ -4,10 +4,10 @@
     <div class="card-body">
       <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
-          <label for="id">Codi d'usuari</label>
-          <input id="id" type="text" formControlName="id" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.id.errors }" />
-          <div *ngIf="submitted && f.id.errors" class="invalid-feedback">
-            <div *ngIf="f.id.errors.required">Es necessita un codi d'usuari</div>
+          <label for="usrid">Codi d'usuari</label>
+          <input id="usrid" type="number" formControlName="usrid" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.usrid.errors }" />
+          <div *ngIf="submitted && f.userid.errors" class="invalid-feedback">
+            <div *ngIf="f.usrid.errors.required">Es necessita un codi d'usuari</div>
           </div>
         </div>
         <div class="form-group">
