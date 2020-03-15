@@ -1,4 +1,12 @@
-<h1>Pàgina inicial Pallars de Foc</h1>
+<!-- nav -->
+<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
+  <div class="navbar-nav">
+    <a class="nav-item nav-link" routerLink="/">Home</a>
+    <a class="nav-item nav-link" (click)="logout()">Logout</a>
+  </div>
+</nav>
 
-<div><h2> Aquí hi ha d'anar tot el programa i un botó per accedir al login</h2></div>
-<button> <h3> Login </h3></button>
+<!-- main app container -->
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

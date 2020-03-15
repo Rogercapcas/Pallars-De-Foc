@@ -17,6 +17,11 @@ import { BillsComponent } from './components/bills/bills.component';
 import { BillDetailComponent } from './components/bill-detail/bill-detail.component';
 import { BillInputComponent } from './components/bill-input/bill-input.component';
 import { BudgetInputComponent } from './components/budget-input/budget-input.component';
+import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from '@angular/common/http';
+import {JwtInterceptor} from './_helpers/jwt.interceptor';
+import {ErrorInterceptor} from './_helpers/error.interceptor';
+// @ts-ignore
+import { fakeBackendProvider} from './_helpers/fake-backend';
 
 @NgModule({
   declarations: [
@@ -40,8 +45,14 @@ import { BudgetInputComponent } from './components/budget-input/budget-input.com
     RouterModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+
+    // provider used to create fake backend
+    fakeBackendProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

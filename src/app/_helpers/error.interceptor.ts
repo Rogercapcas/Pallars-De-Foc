@@ -8,7 +8,7 @@ import { AuthenticationService } from '../services/authentication.service';
 // @ts-ignore
 @Injectable()
 
-export class ErrorInterceptor implements HttpInterceptor{
+export class ErrorInterceptor implements HttpInterceptor {
   constructor(private authenticationService: AuthenticationService) {
   }
 
