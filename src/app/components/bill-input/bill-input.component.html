@@ -1,6 +1,6 @@
 
 <h1><p>Introducció de factura</p></h1>
-<form [formGroup]="billForm"></form>
+<form [formGroup]="billForm" (ngSubmit)="onSubmit()">
   <p>
    <label>
       Nº de factura:
@@ -68,6 +68,6 @@
     <input type = text formControlName="comments">
   </p>
   <p>
-    <button> entrar factura </button>
+    <button type = submit [disabled]="!billForm.valid"> entrar factura </button>
   </p>
-
+</form>
