@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Bill } from '../../models/bill';
-import {EDITIONS} from '../../editions-set';
-import { Edition} from '../../models/edition';
+import { Edition } from '../../models/edition';
+import { FormGroup, FormControl} from '@angular/forms';
+import { Organization } from '../../models/organization';
+import { EditionsSService} from '../../services/editions-s.service';
 
 @Component({
   selector: 'app-bill-input',
@@ -9,10 +11,18 @@ import { Edition} from '../../models/edition';
   styleUrls: ['./bill-input.component.css']
 })
 export class BillInputComponent {
-
-
-
-  onSubmit(): void {
-  }
+  editions = new EditionsSService().getEditions();
+  billForm = new FormGroup({
+    billNumber: new FormControl('Number'),
+    edition: new FormControl('Edition'),
+    date: new FormControl('Date'),
+    from: new FormControl('Organization'),
+    to: new FormControl('Organization'),
+    concept: new FormControl('text'),
+    totalBT: new FormControl('Float'),
+    taxes: new FormControl('Float'),
+    income: new FormControl('Boolean'),
+    comments: new FormControl('text')
+  });
 
 }

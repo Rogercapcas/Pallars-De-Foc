@@ -1,1 +1,70 @@
-<p>bill-input works!</p>
+
+<h1><p>Introducció de factura</p></h1>
+<form [formGroup]="billForm"></form>
+  <p>
+   <label>
+      Nº de factura:
+      <input type = number formControlName="billNumber">
+    </label>
+  </p>
+  <p>
+    <label>
+      Edició Pallars de Foc:
+      <input type = Edition formControlName="edition">
+    </label>
+  </p>
+  <p>
+    <label>
+      Data de la factura:
+      <input type = date formControlName="date">
+    </label>
+  </p>
+  <p>
+    <label>
+      Emisor de la factura:
+      <input type = Organization formControlName="from">
+    </label>
+  </p>
+  <p>
+    <label>
+      Factura adreçada a:
+      <input type = Organization formControlName="to">
+    </label>
+  </p>
+  <p>
+    <label>
+      Concepte de la factura:
+      <input type = text formControlName="concept">
+    </label>
+  </p>
+  <p>
+    <label>
+      Total factura SENSE impostos (sense IVA):
+      <input type = float formControlName="totalBT"> €
+    </label>
+  </p>
+  <p>
+    <label>
+      Total impostos (IVA):
+      <input type = float formControlName="taxes"> €
+    </label>
+  </p>
+  <p>
+    <label>
+      Marca la següent casella si la factura ha estat emesa per lo Peirot:
+    </label>
+  </p>
+  <p>
+    <label>
+      <input type = checkbox formControlName="income">
+    </label>
+  </p>
+  <p>
+    <label>
+      Commentaris:
+    </label>
+  </p>
+  <p>
+    <input type = text formControlName="comments">
+  </p>
+
