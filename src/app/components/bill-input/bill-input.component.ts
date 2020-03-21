@@ -1,5 +1,6 @@
 import { Component} from '@angular/core';
-import { FormGroup, FormControl} from '@angular/forms';
+import { FormGroup, FormControl, FormBuilder} from '@angular/forms';
+import { Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-bill-input',
@@ -7,18 +8,21 @@ import { FormGroup, FormControl} from '@angular/forms';
   styleUrls: ['./bill-input.component.css']
 })
 export class BillInputComponent {
-  billForm = new FormGroup({
-    billNumber: new FormControl(''),
-    edition: new FormControl(''),
-    date: new FormControl(''),
-    from: new FormControl(''),
-    to: new FormControl(''),
-    concept: new FormControl(''),
-    totalBT: new FormControl(''),
-    taxes: new FormControl(''),
-    income: new FormControl(''),
-    comments: new FormControl('')
+  billForm = this.fb.group({
+    billNumber: ['', Validators.required],
+    edition: ['', Validators.required],
+    date: ['', Validators.required],
+    from: ['', Validators.required],
+    to: ['', Validators.required],
+    concept: ['', Validators.required],
+    totalBT: ['', Validators.required],
+    taxes: ['', Validators.required],
+    income: ['', Validators.required],
+    comments: ['']
   });
+
+  constructor(private fb: FormBuilder) { }
+
   onSubmit() {
     console.warn(this.billForm.value);
   }

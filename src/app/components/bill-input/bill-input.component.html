@@ -4,7 +4,7 @@
   <p>
    <label>
       Nº de factura:
-      <input type = number formControlName="billNumber">
+      <input type = number formControlName="billNumber" required="required">
     </label>
   </p>
   <p>
@@ -71,3 +71,6 @@
     <button type = submit [disabled]="!billForm.valid"> entrar factura </button>
   </p>
 </form>
+<p>
+  Form Status: {{ billForm.status }}
+</p>
