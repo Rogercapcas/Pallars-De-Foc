@@ -35,12 +35,13 @@ body, input[type="text"], button {
   font-family: Helvetica;
 }
 button {
-  border: #000000;
+  border-color: #000000;
   border: 0.3em;
   border-radius: 1em;
   border-style: groove;
   font-weight: bold;
   background: #EEEEEE;
+  text-align: center;
 }
 
 button:hover {
@@ -50,11 +51,10 @@ button:hover {
   border-radius: 1em;
   border-style: groove;
   font-weight: bold;
-  background-color: #d02718;
-  left: .1em;
+  background-color: cornflowerblue;
 }
 button:active {
-  color: #d02718;
+  color: cornflowerblue;
   font-weight: bold;
   background-color: #EEEEEE;
   left: .1em;

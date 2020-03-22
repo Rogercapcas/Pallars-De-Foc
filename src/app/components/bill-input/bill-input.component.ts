@@ -17,7 +17,7 @@ export class BillInputComponent {
     concept: ['', Validators.required],
     totalBT: ['', Validators.required],
     taxes: ['', Validators.required],
-    income: ['', Validators.required],
+    income: [''],
     comments: ['']
   });
 
