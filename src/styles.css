@@ -1,7 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
 h1{
-  color: #369;
+  background: cornflowerblue;
+  color: #EEEEEE;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 250%;
 }
@@ -32,4 +33,29 @@ body, input[type="text"], button {
 /*everywhere else*/
 {
   font-family: Helvetica;
+}
+button {
+  border: #000000;
+  border: 0.3em;
+  border-radius: 1em;
+  border-style: groove;
+  font-weight: bold;
+  background: #EEEEEE;
+}
+
+button:hover {
+  color: #EEEEEE;
+  border: #5b5b5b;
+  border: 0.3em;
+  border-radius: 1em;
+  border-style: groove;
+  font-weight: bold;
+  background-color: #d02718;
+  left: .1em;
+}
+button:active {
+  color: #d02718;
+  font-weight: bold;
+  background-color: #EEEEEE;
+  left: .1em;
 }

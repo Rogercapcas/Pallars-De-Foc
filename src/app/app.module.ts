@@ -22,6 +22,7 @@ import {JwtInterceptor} from './_helpers/jwt.interceptor';
 import {ErrorInterceptor} from './_helpers/error.interceptor';
 // @ts-ignore
 import { fakeBackendProvider} from './_helpers/fake-backend';
+import { BudgetEditComponent } from './components/budget-edit/budget-edit.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { fakeBackendProvider} from './_helpers/fake-backend';
     BillsComponent,
     BillDetailComponent,
     BillInputComponent,
-    BudgetInputComponent
+    BudgetInputComponent,
+    BudgetEditComponent
   ],
   imports: [
     BrowserModule,

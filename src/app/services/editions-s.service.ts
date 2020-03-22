@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Edition} from '../models/edition';
+import { Edition } from '../models/edition';
 import { EDITIONS } from '../editions-set';
 
 @Injectable({
@@ -11,5 +11,9 @@ export class EditionsSService {
 
   getEditions(): Edition[] {
     return EDITIONS;
+  }
+
+  getEditionYear(edition: Edition) {
+    return edition.year;
   }
 }
