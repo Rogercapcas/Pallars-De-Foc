@@ -1,1 +1,48 @@
-<p>user-input works!</p>
+<h1> <p> Registre d'un nou usuari </p> </h1>
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label>
+      Id de l'usuari:
+    </label>
+    <input type = number class="form-control" formControlName="id">
+  </div>
+  <div class="form-group">
+    <label>
+      Contrassenya per defecte:
+    </label>
+    <input type = text class="form-control" formControlName="password">
+  </div>
+  <div class="form-group">
+    <label>
+      Nom real:
+    </label>
+    <input type = text class="form-control" formControlName="name">
+  </div>
+  <div class="form-group">
+    <label>
+      Primer cognom:
+    </label>
+    <input type = text class="form-control" formControlName="surname">
+  </div>
+  <div class="form-group">
+    <label>
+      SuperUsuari?
+    </label>
+    <input type = checkbox class="form-control" formControlName="superuser">
+  </div>
+  <div class="form-group">
+    <label>
+      Em@il:
+    </label>
+    <input type = text class="form-control" formControlName="email">
+  </div>
+  <div class="form-group">
+    <label>
+      Número de telèfon:
+    </label>
+    <input type = number class="form-group" formControlName="phoneNumber">
+  </div>
+  <div class="form-group">
+    <button type = submit [disabled]="!userForm.valid"> Crear Usuari</button>
+  </div>
+</form>
