@@ -23,6 +23,8 @@ import {ErrorInterceptor} from './_helpers/error.interceptor';
 // @ts-ignore
 import { fakeBackendProvider} from './_helpers/fake-backend';
 import { BudgetEditComponent } from './components/budget-edit/budget-edit.component';
+import { EditionInputComponent } from './components/edition-input/edition-input.component';
+import { UserInputComponent } from './components/user-input/user-input.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { BudgetEditComponent } from './components/budget-edit/budget-edit.compon
     BillDetailComponent,
     BillInputComponent,
     BudgetInputComponent,
-    BudgetEditComponent
+    BudgetEditComponent,
+    EditionInputComponent,
+    UserInputComponent
   ],
   imports: [
     BrowserModule,

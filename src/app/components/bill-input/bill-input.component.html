@@ -1,18 +1,18 @@
 
 <h1><p>Introducció de factura</p></h1>
 <form [formGroup]="billForm" (ngSubmit)="onSubmit()">
-  <p>
+  <div class="form-group">
    <label>
       Nº de factura:
-      <input type = number formControlName="billNumber" required="required">
     </label>
-  </p>
-  <p>
+    <input type = text class="form-control" formControlName="billNumber">
+  </div>
+  <div class="form-group">
     <label>
       Edició Pallars de Foc:
-      <input type = Edition formControlName="edition">
+      <input type = text formControlName="edition">
     </label>
-  </p>
+  </div>
   <p>
     <label>
       Data de la factura:
@@ -22,13 +22,13 @@
   <p>
     <label>
       Emisor de la factura:
-      <input type = Organization formControlName="from">
+      <input type = text formControlName="from">
     </label>
   </p>
   <p>
     <label>
       Factura adreçada a:
-      <input type = Organization formControlName="toorg">
+      <input type = text formControlName="toorg">
     </label>
   </p>
   <p>
@@ -40,13 +40,13 @@
   <p>
     <label>
       Total factura SENSE impostos (sense IVA):
-      <input type = float formControlName="totalBT"> €
+      <input type = number formControlName="totalBT"> €
     </label>
   </p>
   <p>
     <label>
       Total impostos (IVA):
-      <input type = float formControlName="taxes"> €
+      <input type = number formControlName="taxes"> €
     </label>
   </p>
   <p>
@@ -70,6 +70,6 @@
 <p>
   Form Status: {{ billForm.status }}
 </p>
-<p>
-  prova: {{this.bill.billNumber}}
-</p>
+  <p *ngIf="submitted">
+    prova: {{this.bill.billNumber}}
+  </p>

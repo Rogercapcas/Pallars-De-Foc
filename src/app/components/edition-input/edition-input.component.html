@@ -1,0 +1,20 @@
+<h1> <p> Creació d'una nova edició</p></h1>
+<form [formGroup]="editionForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label>
+      Any de l'edició:
+    </label>
+    <input type = text class="form-control" formControlName="year">
+  </div>
+  <div>
+    <label>
+      Nom de l'edició:
+    </label>
+    <input type = text class = "form-control" formControlName="name">
+  </div>
+  <div>
+    <label>
+
+    </label>
+  </div>
+</form>
