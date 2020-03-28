@@ -1,1 +1,32 @@
-<p>organization-detail works!</p>
+<div *ngIf="organization">
+  <h2> Informació sobre la organització {{organization.name}}</h2>
+  <div>
+    <label>
+      <h3> NIF </h3>
+    {{organization.NIF}}
+    </label>
+  </div>
+  <div>
+    <label>
+      <h3> Ciutat </h3>
+      {{organization.city}}
+    </label>
+  </div>
+  <div>
+    <label>
+      <h3>
+        Codi postal
+      </h3>
+      {{organization.postalCode}}
+    </label>
+  </div>
+  <div>
+    <label>
+      <h3>
+        Adreça
+      </h3>
+    </label>
+    {{organization.addressStreet}}, {{organization.numKm}}, {{organization.stair}}, {{organization.floor}}, {{organization.door}}
+  </div>
+</div>
+

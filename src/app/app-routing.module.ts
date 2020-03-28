@@ -8,6 +8,7 @@ import {BillInputComponent} from './components/bill-input/bill-input.component';
 import {BudgetInputComponent} from './components/budget-input/budget-input.component';
 import {BudgetEditComponent} from './components/budget-edit/budget-edit.component';
 import {UserInputComponent} from './components/user-input/user-input.component';
+import {OrganizationsComponent} from './components/organizations/organizations.component';
 
 const routes: Routes = [
   {path : '', component: AppBaseComponent},
@@ -17,8 +18,9 @@ const routes: Routes = [
   {path: 'billinput', component: BillInputComponent},
   {path: 'budgetinput', component: BudgetInputComponent},
   {path: 'budgetedit', component: BudgetEditComponent},
+  {path: 'userinput', component: UserInputComponent},
+  {path: 'organizations', component: OrganizationsComponent},
   {path: '**', component: AppBaseComponent},
-  {path: 'userinput', component: UserInputComponent}
 ];
 
 // @ts-ignore

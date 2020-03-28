@@ -11,7 +11,7 @@ export class OrganizationsComponent implements OnInit {
   organizations: Organization[];
   selectedOrganization: Organization;
 
-  constructor(private orgservice: OrganizationService) { }
+  constructor(private orgService: OrganizationService) { }
 
   ngOnInit(): void {
     this.getUsers();
@@ -22,6 +22,6 @@ export class OrganizationsComponent implements OnInit {
   }
 
   getUsers() {
-    this.organizations = this.orgservice.getOrganizations();
+    this.organizations = this.orgService.getOrganizations();
   }
 }

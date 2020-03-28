@@ -7,3 +7,6 @@
   </li>
 </ul>
 
+<app-organization-detail [organization]="selectedOrganization"></app-organization-detail>
+<button *ngIf="selectedOrganization" (click)="selectedOrganization=undefined">Enrere</button>
+
