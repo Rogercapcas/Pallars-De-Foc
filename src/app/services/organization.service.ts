@@ -10,7 +10,7 @@ export class OrganizationService {
 
   constructor(private http: HttpClient) { }
 
-  getOrganizations() {
+  getOrganizations(): Organization[] {
     return ORGANIZATIONS;
   }
 }
