@@ -1,4 +1,3 @@
-
 <h1><p>Introducció de factura</p></h1>
 <form [formGroup]="billForm" (ngSubmit)="onSubmit()">
   <div class="form-group">
@@ -69,7 +68,3 @@
 </form>
 <p>
   Form Status: {{ billForm.status }}
-</p>
-  <p *ngIf="submitted">
-    prova: {{this.bill.billNumber}}
-  </p>

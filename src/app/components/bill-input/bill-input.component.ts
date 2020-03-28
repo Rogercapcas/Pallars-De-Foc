@@ -38,7 +38,7 @@ export class BillInputComponent implements OnInit{
     if (this.billForm.invalid) {
       return; }
     // console.warn(this.billForm.value);
-    console.log("hola");
+    console.log('hola');
     console.log(this.billForm);
     // @ts-ignore
     this.bill = new Bill(this.billForm.value.billNumber, this.billForm.value.edition, this.billForm.value.date, this.billForm.value.from, this.billForm.value.toorg, this.billForm.value.concept, this.billForm.value.totalBT, this.billForm.value.taxes, this.billForm.value.income, this.billForm.value.comments);

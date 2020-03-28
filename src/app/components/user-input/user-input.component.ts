@@ -8,6 +8,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./user-input.component.css']
 })
 export class UserInputComponent implements OnInit {
+
   user: User;
   userForm: FormGroup;
   submitted = false;
@@ -15,6 +16,7 @@ export class UserInputComponent implements OnInit {
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {
+    console.log('hola');
     this.userForm = this.fb.group({
       id: ['', Validators.required],
       password: ['', Validators.required],
@@ -31,5 +33,4 @@ export class UserInputComponent implements OnInit {
     this.submitted = true;
     this.user = new User(this.userForm.value.id, this.userForm.value.password, this.userForm.value.name, this.userForm.value.surname, this.userForm.value.superuser, this.userForm.value.email, this.userForm.value.phoneNumber, this.userForm.value.token);
   }
-
 }
