@@ -1,15 +1,17 @@
 import { Injectable } from '@angular/core';
 import {Organization} from '../models/organization';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class OrganizationService {
-  private ORGANIZATIONS: Organization;
+  private ORGANIZATIONS: Organization[];
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   getOrganizations() {
+    this.ORGANIZATIONS = [];
     return this.ORGANIZATIONS;
   }
 }

@@ -25,6 +25,7 @@ import { fakeBackendProvider} from './_helpers/fake-backend';
 import { BudgetEditComponent } from './components/budget-edit/budget-edit.component';
 import { EditionInputComponent } from './components/edition-input/edition-input.component';
 import { UserInputComponent } from './components/user-input/user-input.component';
+import { OrganizationsComponent } from './components/organizations/organizations.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { UserInputComponent } from './components/user-input/user-input.component
     BudgetInputComponent,
     BudgetEditComponent,
     EditionInputComponent,
-    UserInputComponent
+    UserInputComponent,
+    OrganizationsComponent
   ],
   imports: [
     BrowserModule,

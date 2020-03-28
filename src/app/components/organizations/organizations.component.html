@@ -1,0 +1,9 @@
+<h1><p> Organitzacions </p></h1>
+<ul *ngIf="!selectedOrganization" class="organizations">
+  <li *ngFor="let org of organizations"
+      [class.selected]="org === selectedOrganization"
+      (click)="onSelect(org)">
+    <span class="badge"> {{org.NIF}}</span> {{org.name}}
+  </li>
+</ul>
+

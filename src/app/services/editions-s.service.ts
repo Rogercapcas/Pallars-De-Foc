@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Edition } from '../models/edition';
-import { EDITIONS } from '../editions-set';
+import { EDITIONS } from '../data-sets/editions-set';
 
 @Injectable({
   providedIn: 'root'

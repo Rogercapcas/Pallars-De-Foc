@@ -1,4 +1,4 @@
-import { User } from './models/user';
+import { User } from '../models/user';
 const u1: User = new User(1, '123456789AAB', 'Roger', 'Capdevila', true, 'rogercapcas@gmail.com', 666737461, '' );
 const u2: User = new User(2, '1234567890AAB', 'Guillem', 'Pedra', true, 'pedra@totook.es', 689077473, '');
 const u3: User = new User(3, '1234567890AAB', 'Jaume', 'Gelonch', true, 'jaumedelaventa@gmail.com', 612345678, '');
