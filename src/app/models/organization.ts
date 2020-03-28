@@ -10,7 +10,17 @@ export class Organization {
   floor: number;
   door?: string;
 
-  constructor(NIF: string, name: string, city: string, country:string, postalCode: string, addressStreet: string, numKm: number, stair: string, floor: number, door: string) {
+  constructor(
+    NIF: string,
+    name: string,
+    city: string,
+    country: string,
+    postalCode: string,
+    addressStreet: string,
+    numKm: number,
+    stair?: string,
+    floor?: number,
+    door?: string) {
     this.NIF = NIF;
     this.name = name;
     this.city = city;

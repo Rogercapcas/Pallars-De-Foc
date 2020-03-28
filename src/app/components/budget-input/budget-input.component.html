@@ -1,25 +1,26 @@
-<h1><p> Introducció d'un nou pressupost </p></h1>
+<h1><p> Creació d'un nou pressupost </p></h1>
 <form [formGroup]="budgetForm" (ngSubmit)="onSubmit()">
-  <p>
+  <div class="form-group">
     <label>
       Nom del pressupost:
-      <input type="text" formControlName="name" required="required">
     </label>
-  </p>
-  <p>
+    <input type="text" class="form-control" formControlName="name">
+  </div>
+  <div class="form-group">
     <label>
       Edició Pallars de Foc (any):
-      <input type="number" formControlName="edition" required="required">
     </label>
-  </p>
-  <p>
+    <input type="number" formControlName="edition" required="required">
+  </div>
+  <div class="form-group">
     <label>
       Comentaris:
-      <input type="text" formControlName="comments">
     </label>
+    <input type="text" formControlName="comments">
+  </div>
+  <p>
+    <button type="submit" [disabled]="!budgetForm.valid"> Crear pressupost</button>
   </p>
 </form>
-<p>
-  <button type="submit" [disabled]="!budgetForm.valid"> Crear pressupost</button>
-</p>
+
 <p> Form status: {{budgetForm.status}}</p>

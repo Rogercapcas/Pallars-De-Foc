@@ -1,0 +1,85 @@
+<h1><p> Introducció d'una nova entitat/organització </p></h1>
+<form [formGroup]="organizationForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label>
+      NIF de l'entitat/organització a donar d'alta:
+    </label>
+    <input type = text class="form-control" formControlName="nif">
+  </div>
+  <div class="form-group">
+    <label>
+      Raó social de l'entitat/organització (nom):
+    </label>
+    <input type = text class="form-control" formControlName="name">
+  </div>
+  <div class="form-group">
+    <label>
+      Ciutat fiscal:
+    </label>
+    <input type = text class="form-control" formControlName="city">
+  </div>
+  <div class="form-group">
+    <label>
+      País (on te la seu fiscal):
+    </label>
+    <input type = text class="form-control" formControlName="country">
+  </div>
+  <div class="form-group">
+    <label>
+      Codi postal:
+    </label>
+    <input type = text class="form-control" formControlName="postalCode">
+  </div>
+  <div class="form-group">
+    <label>
+      Carrer/Avd./Carretera:
+    </label>
+    <input type = text class="form-control" formControlName="addressStreet">
+  </div>
+  <div class="form-control">
+    <label>
+      Número/Km:
+    </label>
+    <input type = number class="form-control" formControlName="numKm">
+  </div>
+  <div class="form-group">
+    <label>
+      Escala:
+    </label>
+    <input type = text class="form-control" formControlName="stair">
+  </div>
+  <div class="form-group">
+    <label>
+      Pis:
+    </label>
+    <input type = number class="form-control" formControlName="floor">
+  </div>
+  <div class="form-group">
+    <label>
+      Porta:
+    </label>
+    <input type = text class="form-control" formControlName="door">
+  </div>
+  <div class="form-group">
+    <label>
+      Escala:
+    </label>
+    <input type = text class="form-control" formControlName="stair">
+  </div>
+  <div class="form-group">
+    <label>
+      Pis:
+    </label>
+    <input type = number class="form-control" formControlName="floor">
+  </div>
+  <div class="form-group">
+    <label>
+      Porta:
+    </label>
+    <input type = text class="form-control" formControlName="door">
+  </div>
+  <div class="formn-group">
+    <button type = submit [disabled]="!organizationForm.valid"> Crear la nova entitat/organització </button>
+  </div>
+</form>
+Form status: {{organizationForm.status}}

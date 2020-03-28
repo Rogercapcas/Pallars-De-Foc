@@ -27,6 +27,7 @@ import { EditionInputComponent } from './components/edition-input/edition-input.
 import { UserInputComponent } from './components/user-input/user-input.component';
 import { OrganizationsComponent } from './components/organizations/organizations.component';
 import { OrganizationDetailComponent } from './components/organization-detail/organization-detail.component';
+import { OrganizationInputComponent } from './components/organization-input/organization-input.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { OrganizationDetailComponent } from './components/organization-detail/or
     EditionInputComponent,
     UserInputComponent,
     OrganizationsComponent,
-    OrganizationDetailComponent
+    OrganizationDetailComponent,
+    OrganizationInputComponent
   ],
   imports: [
     BrowserModule,
