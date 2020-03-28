@@ -26,6 +26,7 @@ import { BudgetEditComponent } from './components/budget-edit/budget-edit.compon
 import { EditionInputComponent } from './components/edition-input/edition-input.component';
 import { UserInputComponent } from './components/user-input/user-input.component';
 import { OrganizationsComponent } from './components/organizations/organizations.component';
+import { OrganizationDetailComponent } from './components/organization-detail/organization-detail.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { OrganizationsComponent } from './components/organizations/organizations
     BudgetEditComponent,
     EditionInputComponent,
     UserInputComponent,
-    OrganizationsComponent
+    OrganizationsComponent,
+    OrganizationDetailComponent
   ],
   imports: [
     BrowserModule,
