@@ -1,3 +1,9 @@
+body {
+  width: 20em;
+  margin: 0em 50%;
+  position: center;
+}
+
 h2{
   font-size: large;
   font-family: fantasy;
@@ -5,28 +11,27 @@ h2{
   color: #810e05;
   font-style: oblique;
 }
-
-
-
-.redButton {
-  box-shadow: 0px 10px 14px -7px #f5978e;
-  background: #f24537 linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
-  border-radius:4px;
-  border:1px solid #d02718;
-  display:inline-block;
-  cursor:pointer;
-  color:#ffffff;
-  font-family: Cursive, serif;
-  font-size:13px;
-  font-weight:bold;
-  padding:6px 12px;
-  text-decoration:none;
-  text-shadow:0 1px 0 #810e05;
-                                    }
-.redButton:hover {
-  background: #c62d1f linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+li {
+  cursor: pointer;
+  position: center;
+  left: 0;
+  background-color: white;
+  margin: 0.5em;
+  padding: .3em 0;
+  height: 1.6em;
+  border-radius: 4px;
+  width: 20em;
 }
-.redButton:active {
-  position:relative;
-  top:1px;
+li:hover {
+  color: white;
+  background-color: white;
+  left: .1em;
+}
+li.selected {
+  background-color: white;
+  color: white;
+}
+li.selected:hover {
+  background-color: white;
+  color: white;
 }

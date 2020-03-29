@@ -16,24 +16,25 @@ h2{
 
 h3{
   color: #333;
-  font-family: Arial;
+  font-family: Arial, serif;
   font-size: 110%;
   font-weight: bold;
 }
 
 body{
-  margin: 5em;
+  bgcolor: "#E6E6FA";
+  margin: 0em 0em;
 }
 
-body, input[type="text"], button {
+input[type="text"], button {
   color: #333;
-  font-family: Cambria, Georgia;
+  font-family: Cambria, Georgia, serif;
 }
 
-/*everywhere else*/
+/*everywhere else
 {
-  font-family: Helvetica;
-}
+  font-family: Helvetica,serif;
+}*/
 button {
   border-color: #000000;
   border: 0.3em;
@@ -59,12 +60,12 @@ button:active {
   background-color: #EEEEEE;
   left: .1em;
 }
- {
+ /*{
   margin: 0 0 2em 0;
   list-style-type: none;
   padding: 0;
   width: 15em;
-}
+}*/
 li {
   cursor: pointer;
   position: relative;
@@ -101,4 +102,26 @@ li.selected:hover {
   height: 1.8em;
   margin-right: .8em;
   border-radius: 4px 0 0 4px;
+}
+.redButton {
+  box-shadow: 0px 10px 14px -7px #f5978e;
+  background: #f24537 linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
+  border-radius:4px;
+  border:1px solid #d02718;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family: Cursive, serif;
+  font-size:13px;
+  font-weight:bold;
+  padding:6px 12px;
+  text-decoration:none;
+  text-shadow:0 1px 0 #810e05;
+}
+.redButton:hover {
+  background: #c62d1f linear-gradient(to bottom, #c62d1f 5%, #f24537 100%);
+}
+.redButton:active {
+  position:relative;
+  top:1px;
 }

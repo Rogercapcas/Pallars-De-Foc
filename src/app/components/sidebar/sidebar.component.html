@@ -1,8 +1,20 @@
-<body>
-<h1> Edicions </h1>
-<li *ngFor="let edition of editions"
-    [class.selected]="edition ===selectedEdition"
-    (click)="onSelect(edition)">
-  <span class="badge">{{edition.name}}  edició ( {{edition.year}} )</span>
-</li>
-</body>
+<h2>Menú</h2>
+
+<div>
+  <button class= redButton>Pressupostos</button>
+</div>
+<div>
+  <button class= redButton>Factures</button>
+</div>
+<div>
+  <button class= redButton>Altres ingressos/despeses</button>
+</div>
+<div>
+  <button class= redButton>Colles convidades</button>
+</div>
+<div>
+  <button class= redButton>Contactes</button>
+</div>
+<div>
+  <button class= redButton>Resum</button>
+</div>
