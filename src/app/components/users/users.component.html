@@ -1,11 +1,14 @@
-<h1>Usuaris</h1>
-<ul *ngIf="!selectedUser" class="users">
-  <li *ngFor="let user of users"
-      [class.selected]="user === selectedUser"
-      (click)="onSelect(user)">
-    <span class="badge"> {{user.id}}</span> {{user.name}}
-  </li>
-</ul>
+<app-sidebar></app-sidebar>
+<body>
+  <h1>Usuaris</h1>
+  <ul *ngIf="!selectedUser" class="users">
+    <li *ngFor="let user of users"
+        [class.selected]="user === selectedUser"
+        (click)="onSelect(user)">
+      <span class="badge"> {{user.id}}</span> {{user.name}}
+    </li>
+  </ul>
 
-<app-user-detail [user]="selectedUser"></app-user-detail>
-<button *ngIf="selectedUser" (click)="selectedUser=undefined">Enrere</button>
+  <app-user-detail [user]="selectedUser"></app-user-detail>
+  <button *ngIf="selectedUser" (click)="selectedUser=undefined">Enrere</button>
+</body>
