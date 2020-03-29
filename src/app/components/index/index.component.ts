@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Edition } from '../../models/edition';
 import { EditionsSService } from '../../services/editions-s.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-index',
@@ -11,14 +12,21 @@ export class IndexComponent implements OnInit {
   editions: Edition[];
   selectedEdition: Edition;
 
-  constructor(private editionsSService: EditionsSService) { }
+  constructor(private editionsSService: EditionsSService, private router: Router) { }
 
   ngOnInit(): void {
     this.getEditions();
   }
 
-  onSelect(edition: Edition) {
+  onSelect(url, edition: Edition) {
     this.selectedEdition = edition;
+    this.router.navigate([url, this.editions]).then( (e) => {
+      if (e) {
+        console.log('Navigate successful!');
+      } else {
+        console.log('Navigate failure!');
+      }
+    });
   }
   getEditions(): void {
     this.editions = this.editionsSService.getEditions();

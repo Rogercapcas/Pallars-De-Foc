@@ -10,6 +10,7 @@ import {BudgetEditComponent} from './components/budget-edit/budget-edit.componen
 import {UserInputComponent} from './components/user-input/user-input.component';
 import {OrganizationsComponent} from './components/organizations/organizations.component';
 import {OrganizationInputComponent} from './components/organization-input/organization-input.component';
+import {SidebarComponent} from './components/sidebar/sidebar.component';
 
 const routes: Routes = [
   {path : '', component: AppBaseComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: 'userinput', component: UserInputComponent},
   {path: 'organizations', component: OrganizationsComponent},
   {path: 'orginput', component: OrganizationInputComponent},
+  {path: 'sidebar', component: SidebarComponent},
   {path: '**', component: AppBaseComponent},
 ];
 

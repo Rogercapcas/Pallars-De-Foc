@@ -1,12 +1,13 @@
-<!-- nav -->
+<u><h6> Benvinguts a la pàgina oficial del Pallars de Foc </h6></u>
 <nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
   <div class="navbar-nav">
     <a class="nav-item nav-link" routerLink="/">Home</a>
     <a class="nav-item nav-link" (click)="logout()">Logout</a>
   </div>
 </nav>
-
+<body class="base">
 <!-- main app container -->
 <div class="container">
   <router-outlet></router-outlet>
 </div>
+</body>

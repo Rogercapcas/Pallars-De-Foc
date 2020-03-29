@@ -10,7 +10,7 @@
   <button class= redButton>Altres ingressos/despeses</button>
 </div>
 <div>
-  <button class= redButton>Colles convidades</button>
+  <button class= redButton (click)="goTo('/organizations')">Colles convidades</button>
 </div>
 <div>
   <button class= redButton>Contactes</button>
@@ -19,5 +19,8 @@
   <button class= redButton>Resum</button>
 </div>
 <div>
-  <button> Desconnecta't</button>
+  <button class="redButton" (click)="goTo('/index')">Índex d'edicions</button>
+</div>
+<div>
+  <button> Desconnecta't </button>
 </div>
