@@ -1,6 +1,6 @@
 .side {
   width: 12em;
-  background: #f24537 linear-gradient(to bottom, #f24537 5%, black 100%);
+  /*background: #f24537 linear-gradient(to bottom, #f24537 5%, black 100%);*/
   margin: 0em 0em;
   border-radius: 1em;
 }
