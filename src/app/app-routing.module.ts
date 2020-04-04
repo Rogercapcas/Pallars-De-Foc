@@ -3,7 +3,7 @@ import { Routes, RouterModule} from '@angular/router';
 import {LoginPageComponent} from './components/login-page/login-page.component';
 import {UsersComponent} from './components/users/users.component';
 import {AppBaseComponent} from './components/app-base/app-base.component';
-import {IndexComponent} from './components/index/index.component';
+import {IndexComponent} from './components/editions-index/index.component';
 import {BillInputComponent} from './components/bill-input/bill-input.component';
 import {BudgetInputComponent} from './components/budget-input/budget-input.component';
 import {BudgetEditComponent} from './components/budget-edit/budget-edit.component';

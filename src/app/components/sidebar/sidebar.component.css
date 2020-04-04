@@ -1,10 +1,26 @@
-body {
+.side {
   width: 12em;
   background: #f24537 linear-gradient(to bottom, #f24537 5%, black 100%);
   margin: 0em 0em;
   border-radius: 1em;
 }
 
+h1 {
+  font-size: 100%;
+  font-family: "Helvetica Neue", fantasy;
+  font-weight: bold;
+  color: #EEEEEE;
+}
+
+h2{
+  font-size: large;
+  font-family: "Helvetica Neue";
+  font-weight: bold;
+  color: white;
+  font-style: oblique;
+  margin-left: 1em;
+}
+/*
 .sidebar {
   margin: 0 0 2em 0;
   list-style-type: none;
@@ -50,23 +66,6 @@ body {
   border-radius: 4px 0 0 4px;
 }
 
-h1 {
-  font-size: 100%;
-  font-family: "Helvetica Neue", fantasy;
-  font-weight: bold;
-  color: #EEEEEE;
-
-}
-
-h2{
-  font-size: large;
-  font-family: fantasy;
-  font-weight: bold;
-  color: white;
-  font-style: oblique;
-  margin-left: 1em;
-}
-
 .redButton {
   box-shadow: 0 10px 14px -7px #f5978e;
   background: #f24537 linear-gradient(to bottom, #f24537 5%, #c62d1f 100%);
@@ -87,3 +86,5 @@ h2{
   position:relative;
   top:1px;
 }
+
+*/

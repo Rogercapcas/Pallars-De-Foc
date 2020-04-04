@@ -23,6 +23,7 @@ export class OrganizationInputComponent implements OnInit {
       postalCode: ['', Validators.required],
       addressStreet: ['', Validators.required],
       numKm: ['', Validators.required],
+      contactName: ['', Validators.required],
       stair: [''],
       floor: [''],
       door: ['']

@@ -10,7 +10,7 @@ import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppBaseComponent } from './components/app-base/app-base.component';
-import { IndexComponent } from './components/index/index.component';
+import { IndexComponent } from './components/editions-index/index.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { BudgetDetailComponent } from './components/budget-detail/budget-detail.component';
 import { BillsComponent } from './components/bills/bills.component';

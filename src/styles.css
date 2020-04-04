@@ -1,9 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-
+/*
 body{
   bgcolor: "#E6E6FA";
-  margin: -0em 12em;
-}
+  margin: 0em;
+}*/
 
 h1{
   background: cornflowerblue;
@@ -34,7 +34,7 @@ h6{
   font-style: oblique;
 }
 
-input[type="text"], button {
+input[type="text"]{
   color: #333;
   font-family: Cambria, Georgia, serif;
 }
@@ -43,7 +43,7 @@ input[type="text"], button {
 {
   font-family: Helvetica,serif;
 }*/
-button {
+/*button {
   border-color: #000000;
   border: 0.3em;
   border-radius: 1em;
@@ -68,12 +68,12 @@ button:active {
   background-color: #EEEEEE;
   left: .1em;
 }
- /*{
+ {
   margin: 0 0 2em 0;
   list-style-type: none;
   padding: 0;
   width: 15em;
-}*/
+}
 li {
   cursor: pointer;
   position: relative;
@@ -133,3 +133,4 @@ li.selected:hover {
   position:relative;
   top:1px;
 }
+*/

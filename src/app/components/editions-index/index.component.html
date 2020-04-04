@@ -3,8 +3,8 @@
   Escull una edició
   <li *ngFor="let edition of editions"
       [class.selected]="edition ===selectedEdition"
-      (click)="onSelect('/sidebar', edition)">
-    <span class="redButton">{{edition.name}}  edició ( {{edition.year}} )</span>
+      (click)="onSelect('/*', edition)">
+    <button type="button" class="btn-outline-danger">{{edition.name}}  edició ( {{edition.year}} )</button>
   </li>
 </body>
 

@@ -1,5 +1,4 @@
-<app-sidebar></app-sidebar>
-<body>
+<div class = "<base">
   <h1>Usuaris</h1>
   <ul *ngIf="!selectedUser" class="users">
     <li *ngFor="let user of users"
@@ -11,4 +10,4 @@
 
   <app-user-detail [user]="selectedUser"></app-user-detail>
   <button *ngIf="selectedUser" (click)="selectedUser=undefined">Enrere</button>
-</body>
+</div>

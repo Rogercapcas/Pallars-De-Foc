@@ -9,6 +9,9 @@ export class Organization {
   stair?: string;
   floor: number;
   door?: string;
+  contactName: string;
+  contactPhone: number;
+  mainEmail: string;
 
   constructor(
     NIF: string,
@@ -18,9 +21,13 @@ export class Organization {
     postalCode: string,
     addressStreet: string,
     numKm: number,
+    contactName: string,
+    contactPhone: number,
+    mainEmail: string,
     stair?: string,
     floor?: number,
-    door?: string) {
+    door?: string
+  ) {
     this.NIF = NIF;
     this.name = name;
     this.city = city;
@@ -31,5 +38,8 @@ export class Organization {
     this.stair = stair;
     this.floor = floor;
     this.door = door;
+    this.contactName = contactName;
+    this.contactPhone = contactPhone;
+    this.mainEmail = mainEmail;
   }
 }
