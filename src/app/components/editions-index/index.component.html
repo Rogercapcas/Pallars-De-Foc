@@ -1,4 +1,4 @@
-<body>
+<div class="idxposition">
   <h2>ÍNDEX</h2>
   Escull una edició
   <li *ngFor="let edition of editions"
@@ -6,5 +6,5 @@
       (click)="onSelect('/*', edition)">
     <button type="button" class="btn-outline-danger">{{edition.name}}  edició ( {{edition.year}} )</button>
   </li>
-</body>
+</div>
 

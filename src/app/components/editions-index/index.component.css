@@ -1,4 +1,4 @@
-body {
+.idxposition{
   width: 20em;
   margin: 1em 50%;
   position: center;
@@ -10,28 +10,4 @@ h2{
   font-weight: bold;
   color: #810e05;
   font-style: oblique;
-}
-li {
-  cursor: pointer;
-  position: center;
-  left: 0;
-  background-color: white;
-  margin: 0.5em;
-  padding: .3em 0;
-  height: 1.6em;
-  border-radius: 4px;
-  width: 20em;
-}
-li:hover {
-  color: white;
-  background-color: white;
-  left: .1em;
-}
-li.selected {
-  background-color: white;
-  color: white;
-}
-li.selected:hover {
-  background-color: white;
-  color: white;
 }
