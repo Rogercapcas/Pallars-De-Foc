@@ -1,8 +1,11 @@
 .side {
   width: 12em;
-  background: #f24537 linear-gradient(to bottom, #f24537 5%, black 100%);
-  margin: 0em 0em;
-  border-radius: 1em;
+  /*background: #f24537 linear-gradient(to bottom, #f24537 5%, black 100%);*/
+  margin: 3em 0em;
+  border-radius: 0.5em;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
 }
 
 h1 {

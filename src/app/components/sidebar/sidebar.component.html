@@ -1,9 +1,9 @@
-<div class = "side">
-<h2>Menú</h2>
+<div class="side">
+  <div><br></div>
   <div>
     <div class="btn-group">
-      <button type="button" class="btn btn-danger">Pressupostos</button>
-      <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button type="button" class="btn btn-primary">Pressupostos</button>
+      <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <span class="sr-only">Toggle Dropdown</span>
       </button>
       <div class="dropdown-menu">
@@ -12,23 +12,27 @@
       </div>
     </div>
   </div>
+  <br>
+  <div>
   <div class="btn-group">
-    <button type="button" class="btn btn-danger">Ingr. i desp.</button>
-    <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button type="button" class="btn btn-primary">Ingressos i desp.</button>
+    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <span class="sr-only">Toggle Dropdown</span>
     </button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="/billinput">Entrar factura</a>
+      <a class="dropdown-item" (click)="goTo('/index')">Entrar factura</a>
       <a class="dropdown-item" href="#">Entrar altre ingrès/despesa</a>
       <a class="dropdown-item" href="/bills">Consultar ingressos i despeses</a>
       <div class="dropdown-divider"></div>
       <a class="dropdown-item" href="#">Justificar subvencions</a>
     </div>
   </div>
+  </div>
+  <br>
   <div>
     <div class="btn-group">
-      <button type="button" class="btn btn-danger">Colles de diables</button>
-      <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button type="button" class="btn btn-primary">Colles de diables</button>
+      <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <span class="sr-only">Toggle Dropdown</span>
       </button>
       <div class="dropdown-menu">
@@ -39,16 +43,22 @@
       </div>
     </div>
   </div>
+  <br>
   <div>
-    <button type="button" class="btn btn-danger">Contactes de Lo Peirot</button>
+    <button type="button" class="btn btn-primary">Contactes interns</button>
   </div>
+  <br>
   <div>
-    <button type="button" class="btn btn-danger">Resum</button>
+    <button type="button" class="btn btn-primary">Resum</button>
   </div>
+  <br>
   <div>
-    <button type="button" class="btn btn-danger" (click)="goTo('/index')">Edicions</button>
+    <button type="button" class="btn btn-primary" (click)="goTo('/index')">Edicions</button>
   </div>
+  <br>
+  <br>
   <div>
     <button class="btn btn-dark" > Desconnecta't </button>
   </div>
-</div>
+  <div><br></div>
+
