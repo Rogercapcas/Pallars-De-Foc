@@ -1,10 +1,10 @@
 <div class="idxposition">
-  <h2>ÍNDEX</h2>
+  <h2>Edicions Pallars de Foc</h2>
   Escull una edició
   <li *ngFor="let edition of editions"
       [class.selected]="edition ===selectedEdition"
       (click)="onSelect('/*', edition)">
-    <button type="button" class="btn-outline-danger">{{edition.name}}  edició ( {{edition.year}} )</button>
+    <button type="button" class="btn btn-danger">{{edition.name}}  edició ( {{edition.year}} )</button>
   </li>
 </div>
 

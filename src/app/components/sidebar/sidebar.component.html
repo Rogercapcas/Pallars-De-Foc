@@ -1,7 +1,16 @@
 <div class = "side">
-
+<h2>Menú</h2>
   <div>
-    <button type="button" class="btn btn-danger">Pressupostos</button>
+    <div class="btn-group">
+      <button type="button" class="btn btn-danger">Pressupostos</button>
+      <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="sr-only">Toggle Dropdown</span>
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/#">Crear un pressupost</a>
+        <a class="dropdown-item" href="#">Consultar pressupostos</a>
+      </div>
+    </div>
   </div>
   <div class="btn-group">
     <button type="button" class="btn btn-danger">Ingr. i desp.</button>
@@ -9,18 +18,29 @@
       <span class="sr-only">Toggle Dropdown</span>
     </button>
     <div class="dropdown-menu">
-      <a class="dropdown-item" href="#">Entrar factura</a>
+      <a class="dropdown-item" href="/billinput">Entrar factura</a>
       <a class="dropdown-item" href="#">Entrar altre ingrès/despesa</a>
-      <a class="dropdown-item" href="#">Consultar ingressos i despeses</a>
+      <a class="dropdown-item" href="/bills">Consultar ingressos i despeses</a>
       <div class="dropdown-divider"></div>
       <a class="dropdown-item" href="#">Justificar subvencions</a>
     </div>
   </div>
   <div>
-    <button type="button" class="btn btn-danger" (click)="goTo('/organizations')">Colles convidades</button>
+    <div class="btn-group">
+      <button type="button" class="btn btn-danger">Colles de diables</button>
+      <button type="button" class="btn btn-danger dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="sr-only">Toggle Dropdown</span>
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/#">Entitats confirmades</a>
+        <a class="dropdown-item" href="#">Consultar dades totes les colles</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Introduïr una nova entitat</a>
+      </div>
+    </div>
   </div>
   <div>
-    <button type="button" class="btn btn-danger">Contactes</button>
+    <button type="button" class="btn btn-danger">Contactes de Lo Peirot</button>
   </div>
   <div>
     <button type="button" class="btn btn-danger">Resum</button>

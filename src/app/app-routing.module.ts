@@ -11,6 +11,7 @@ import {UserInputComponent} from './components/user-input/user-input.component';
 import {OrganizationsComponent} from './components/organizations/organizations.component';
 import {OrganizationInputComponent} from './components/organization-input/organization-input.component';
 import {SidebarComponent} from './components/sidebar/sidebar.component';
+import {BillsComponent} from './components/bills/bills.component';
 
 const routes: Routes = [
   {path : '', component: AppBaseComponent},
@@ -24,6 +25,7 @@ const routes: Routes = [
   {path: 'organizations', component: OrganizationsComponent},
   {path: 'orginput', component: OrganizationInputComponent},
   {path: 'sidebar', component: SidebarComponent},
+  {path: 'bills', component: BillsComponent},
   {path: '**', component: AppBaseComponent},
 ];
 
