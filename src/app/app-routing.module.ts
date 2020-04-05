@@ -14,7 +14,7 @@ import {SidebarComponent} from './components/sidebar/sidebar.component';
 import {BillsComponent} from './components/bills/bills.component';
 
 const routes: Routes = [
-  {path : '', component: AppBaseComponent},
+  {path : '', component: IndexComponent},
   {path: 'login', component: LoginPageComponent},
   {path: 'users', component: UsersComponent},
   {path: 'index', component: IndexComponent},
