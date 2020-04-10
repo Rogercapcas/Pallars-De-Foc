@@ -68,7 +68,7 @@
   <ul class="navbar-nav">
     <div class="btn-group">
       <li class="nav-item"><a class="btn btn-primary nav-link" >Pressupostos</a></li>
-      <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+      <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <span class="sr-only">Toggle Dropdown</span>
       </button>
       <div class="dropdown-menu">
@@ -76,6 +76,32 @@
         <a class="dropdown-item" href="budgets">Consultar pressupostos</a>
       </div>
     </div>
+    <div class="btn-group">
+      <li class="nav-item"><a class="btn btn-primary nav-link" >Ingressos i desp.</a></li>
+      <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="sr-only">Toggle Dropdown</span>
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="billinput">Entrar factura</a>
+        <a class="dropdown-item" href="#">Entrar altre ingrès/despesa</a>
+        <a class="dropdown-item" href="/bills">Consultar ingressos i despeses</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Justificar subvencions</a>
+      </div>
+    </div>
+    <div class="btn-group">
+      <li class="nav-item"><a class="btn btn-primary nav-link" routerLink="">Colles de diables</a></li>
+      <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <span class="sr-only">Toggle Dropdown</span>
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/">Entitats confirmades</a>
+        <a class="dropdown-item" href="organizations">Llista totes les colles</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="orginput">Introduïr nova colla</a>
+      </div>
+    </div>
+    <li class="nav-item"><a class="btn btn-primary nav-link" routerLink="">Contactes Lo Peirot</a></li>
     <li class="nav-item"><a class="btn btn-primary nav-link" routerLink="">Resum</a></li>
     <li class="nav-item"><a class="btn btn-primary nav-link" routerLink="index">Edicions</a></li>
   </ul>
