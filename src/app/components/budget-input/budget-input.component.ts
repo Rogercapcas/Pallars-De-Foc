@@ -21,7 +21,7 @@ export class BudgetInputComponent implements OnInit {
   ngOnInit(): void {
     this.budgetForm = this.fb.group({
       name:  ['', Validators.required],
-      edition:  ['', Validators.required],
+      edition:  ['', (Validators.required as unknown as number)],
       /*concepts: this.fb.group({
         income: ['', Validators.required],
         concept:  ['', Validators.required],

@@ -23,6 +23,34 @@ h2{
   font-style: oblique;
   margin-left: 1em;
 }
+
+.custom-bg{
+  background-color: red;
+}
+.navbar-fixed-left {
+  bottom: 0;
+  width: 232px;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  right: auto;
+  position: fixed;
+  top: 0;
+}
+
+.navbar-fixed-left .navbar-nav > li {
+  float: none;  /* Cancel default li float: left */
+  width: 139px;
+}
+
+.navbar-fixed-left + .container {
+  padding-left: 160px;
+}
+
+/* On using dropdown menu (To right shift popuped) */
+.navbar-fixed-left .navbar-nav > li > .dropdown-menu {
+  margin-top: -50px;
+  margin-left: 140px;
+}
 /*
 .sidebar {
   margin: 0 0 2em 0;

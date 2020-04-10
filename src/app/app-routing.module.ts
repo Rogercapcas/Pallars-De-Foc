@@ -12,6 +12,7 @@ import {OrganizationsComponent} from './components/organizations/organizations.c
 import {OrganizationInputComponent} from './components/organization-input/organization-input.component';
 import {SidebarComponent} from './components/sidebar/sidebar.component';
 import {BillsComponent} from './components/bills/bills.component';
+import {BudgetsComponent} from './components/budgets/budgets.component';
 
 const routes: Routes = [
   {path : '', component: IndexComponent},
@@ -26,6 +27,7 @@ const routes: Routes = [
   {path: 'orginput', component: OrganizationInputComponent},
   {path: 'sidebar', component: SidebarComponent},
   {path: 'bills', component: BillsComponent},
+  {path: 'budgets', component: BudgetsComponent},
   {path: '**', component: AppBaseComponent},
 ];
 

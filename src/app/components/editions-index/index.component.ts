@@ -20,7 +20,7 @@ export class IndexComponent implements OnInit {
 
   onSelect(url, edition: Edition) {
     this.selectedEdition = edition;
-    this.router.navigate([url, this.editions]).then( (e) => {
+    this.router.navigate([url]).then( (e) => {
       if (e) {
         console.log('Navigate successful!');
       } else {
