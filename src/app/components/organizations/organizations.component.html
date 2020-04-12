@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html>
-<body style="background-color:powderblue;">
-
-  <h1><p> Organitzacions </p></h1>
-  <ul *ngIf="!selectedOrganization" class="organizations">
-    <li *ngFor="let org of organizations"
-        [class.selected]="org === selectedOrganization"
-        (click)="onSelect(org)">
-      <span class="badge"> {{org.NIF}}</span> {{org.name}}
-    </li>
-  </ul>
-
-  <app-organization-detail [organization]="selectedOrganization"></app-organization-detail>
-  <button *ngIf="selectedOrganization" (click)="selectedOrganization=undefined">Enrere</button>
+<h1><p> Entitats </p></h1>
+<ul *ngIf="!selectedOrganization" class="organizations">
+  <li *ngFor="let org of organizations"
+      [class.selected]="org === selectedOrganization"
+      (click)="onSelect(org)">
+    <!--<span class="badge"> {{org.name}}</span>--> {{org.name}}
+  </li>
+</ul>
+<app-organization-detail [organization]="selectedOrganization"></app-organization-detail>
+<button *ngIf="selectedOrganization" (click)="selectedOrganization=undefined">Enrere</button>
 

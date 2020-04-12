@@ -2,6 +2,12 @@
   <h2> Informació sobre la organització {{organization.name}}</h2>
   <div>
     <label>
+      <h3> Tipus t'entitat </h3>
+      {{organization.organizationType}}
+    </label>
+  </div>
+  <div>
+    <label>
       <h3> NIF </h3>
     {{organization.NIF}}
     </label>
@@ -27,6 +33,30 @@
       </h3>
     </label>
     {{organization.addressStreet}}, {{organization.numKm}}, {{organization.stair}}, {{organization.floor}}, {{organization.door}}
+  </div>
+  <div>
+    <label>
+      <h3>
+        Telèfon de contacte
+      </h3>
+      {{organization.contactPhone}}
+    </label>
+  </div>
+  <div>
+    <label>
+      <h3>
+        Persona de contacte
+      </h3>
+      {{organization.contactName}}
+    </label>
+  </div>
+  <div>
+    <label>
+      <h3>
+        Em@ail de contacte
+      </h3>
+      {{organization.mainEmail}}
+    </label>
   </div>
 </div>
 

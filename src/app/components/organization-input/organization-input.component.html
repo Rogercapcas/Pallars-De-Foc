@@ -1,4 +1,4 @@
-<h1><p> Introducció d'una nova entitat/organització </p></h1>
+<h1><p> Introducció d'una nova entitat </p></h1>
 <form [formGroup]="organizationForm" (ngSubmit)="onSubmit()">
   <div class="form-group">
     <label>
@@ -36,7 +36,7 @@
     </label>
     <input type = text class="form-control" formControlName="addressStreet">
   </div>
-  <div class="form-control">
+  <div class="group">
     <label>
       Número/Km:
     </label>
@@ -62,24 +62,20 @@
   </div>
   <div class="form-group">
     <label>
-      Escala:
+      Contacte:
     </label>
-    <input type = text class="form-control" formControlName="stair">
+    <input type = text class="form-control" formControlName="contactName">
   </div>
   <div class="form-group">
-    <label>
-      Pis:
-    </label>
-    <input type = number class="form-control" formControlName="floor">
-  </div>
-  <div class="form-group">
-    <label>
-      Porta:
-    </label>
-    <input type = text class="form-control" formControlName="door">
+    <label for="organizationType">Tipus d'entitat</label>
+    <select class="form-control" id="organizationType" formControlName="organizationType">
+      <option>Colla de diables</option>
+      <option>Entitat pública</option>
+      <option>Empresa privada</option>
+    </select>
   </div>
   <div class="formn-group">
-    <button type = submit [disabled]="!organizationForm.valid"> Crear la nova entitat/organització </button>
+    <button type = submit [disabled]="!organizationForm.valid"> Crear la nova entitat </button>
   </div>
 </form>
 Form status: {{organizationForm.status}}

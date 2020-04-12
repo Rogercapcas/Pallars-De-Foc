@@ -12,6 +12,7 @@ export class Organization {
   contactName: string;
   contactPhone: number;
   mainEmail: string;
+  organizationType: string;
 
   constructor(
     NIF: string,
@@ -24,6 +25,7 @@ export class Organization {
     contactName: string,
     contactPhone: number,
     mainEmail: string,
+    organizationType: string,
     stair?: string,
     floor?: number,
     door?: string
@@ -41,5 +43,6 @@ export class Organization {
     this.contactName = contactName;
     this.contactPhone = contactPhone;
     this.mainEmail = mainEmail;
+    this.organizationType = organizationType;
   }
 }
