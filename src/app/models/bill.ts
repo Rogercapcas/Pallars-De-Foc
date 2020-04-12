@@ -11,7 +11,7 @@ export class Bill {
   budgetConcept: string;
   totalBT: number; /*Total Before Taxes*/
   taxes: number;
-  income: boolean;
+  income: boolean; /* if its value is true means income, when its value is false means outcome*/
   comments: string;
 
   constructor(billNumber: number, edition: Edition, date: Date, from: Organization, to: Organization, concept: string, budgetConcept: string, totalBT: number, taxes: number, income: boolean, comments: string) {

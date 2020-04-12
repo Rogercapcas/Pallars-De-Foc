@@ -1,11 +1,11 @@
 <h1><p>Factures</p></h1>
 
 <h2><p>Despeses</p></h2>
-<li *ngFor="let bill of bills"
-    [class.selected]="bill === selectedBill"
-    (click)="onSelect(bill)">
-  <span *ngIf="!bill.income"> Concepte: {{bill.concept}} / Data: {{bill.date}} / De: {{bill.from}} / Total: {{bill.totalBT}} / IVA: {{bill.taxes}}</span>
-</li>
+  <li *ngFor="let bill of bills"
+      [class.selected]="bill === selectedBill"
+      (click)="onSelect(bill)">
+    <span *ngIf="!bill.income"> Concepte: {{bill.concept}} / Data: {{bill.date}} / De: {{bill.from}} / Total: {{bill.totalBT}} / IVA: {{bill.taxes}}</span>
+  </li>
 
 <h2><p>Ingressos</p></h2>
 <li *ngFor="let bill of bills"
