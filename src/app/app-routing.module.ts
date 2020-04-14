@@ -13,6 +13,7 @@ import {OrganizationInputComponent} from './components/organization-input/organi
 import {SidebarComponent} from './components/sidebar/sidebar.component';
 import {BillsComponent} from './components/bills/bills.component';
 import {BudgetsComponent} from './components/budgets/budgets.component';
+import {BudgetDetailComponent} from './components/budget-detail/budget-detail.component';
 
 const routes: Routes = [
   {path : '', component: IndexComponent},
@@ -22,6 +23,7 @@ const routes: Routes = [
   {path: 'billinput', component: BillInputComponent},
   {path: 'budgetinput', component: BudgetInputComponent},
   {path: 'budgetedit', component: BudgetEditComponent},
+  {path: 'budgetdetail', component: BudgetDetailComponent},
   {path: 'userinput', component: UserInputComponent},
   {path: 'organizations', component: OrganizationsComponent},
   {path: 'orginput', component: OrganizationInputComponent},
