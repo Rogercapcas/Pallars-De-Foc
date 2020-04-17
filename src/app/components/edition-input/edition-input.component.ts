@@ -16,19 +16,14 @@ export class EditionInputComponent implements OnInit {
   ngOnInit() {
     this.editionForm = this.fb.group({
       year: ['', Validators.required],
-      name: ['', Validators.required],
-      generalManagers: ['', Validators.required],
-      humanResources: [''],
-      billsManager: [''],
-      barManagers: [''],
-      organizationsManager: ['']
+      name: ['', Validators.required]
     });
   }
   get f() { return this.editionForm.controls; }
 
   onSubmit() {
     this.submitted = true;
-    this.edition = new Edition(this.editionForm.value.year, this.editionForm.value.name, this.editionForm.value.generalManagers, this.editionForm.value.humanResources, this.editionForm.value.billsManager, this.editionForm.value.barManagers, this.editionForm.value.organizationsManager);
+    this.edition = new Edition(this.editionForm.value.year, this.editionForm.value.name);
     console.log(this.editionForm);
   }
 }

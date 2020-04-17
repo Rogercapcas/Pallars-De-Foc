@@ -13,8 +13,4 @@ export class BudgetEditComponent {
     this.budged = b;
   }
 
-  addConcept(income: boolean, concept: string, amount: number) {
-    this.budged.concepts.concat([income, concept, amount]);
-  }
-
 }
