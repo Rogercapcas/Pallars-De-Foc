@@ -1,76 +1,68 @@
-<div class="container-fluid">
-  <div class="row">
- <!--   <div class="col-2">
-      <app-sidebar></app-sidebar>
-    </div>-->
-    <div class="col-9">
-      <h1><p>Introducció de factura</p></h1>
-      <form [formGroup]="billForm" (ngSubmit)="onSubmit()">
-        <div class="form-group">
-          <label>
-            Nº de factura:
-            <input type = text class="form-control" formControlName="billNumber">
-          </label>
-        </div>
-        <div class="form-group">
-          <label>
-            Edició Pallars de Foc:
-            <input type = text class="form-control" formControlName="edition">
-          </label>
-        </div>
-        <div class="form-group">
-          <label>
-            Data de la factura:
-            <input type = date class="form-control" formControlName="date">
-          </label>
-        </div>
-        <div class="form-group">
-          <label>
-            Emisor de la factura:
-            <input type = text class="form-control" formControlName="from">
-          </label>
-        </div>
-        <div class="form-group">
-          <label>
-            Factura adreçada a:
-            <input type = text class="form-control" formControlName="toorg">
-          </label>
-        </div>
-        <div class="form-group">
-          <label>
-            Concepte de la factura:
-            <input type = text class="form-control" formControlName="concept">
-          </label>
-        </div>
-        <div class="form-group">
-          <label>
-            Total factura SENSE impostos (sense IVA):
-            <input type = number formControlName="totalBT"> €
-          </label>
-        </div>
-        <div class="form-group">
-          <label>
-            Total impostos (IVA):
-            <input type = number formControlName="taxes"> €
-          </label>
-        </div>
-        <div class="form-group">
-          <label for="exampleFormControlFile1">Adjuntar la factura</label>
-          <input type="file" class="form-control-file" id="exampleFormControlFile1">
-        </div>
-        <div class="form-group">
-          <label>
-            Commentaris:
-            <textarea type = text class="form-control" formControlName="comments"  placeholder="Introdueix comentaris. No és obligatori" rows="3"></textarea>
-          </label>
-        </div>
-        <p>
-          <button type = submit [disabled]="!billForm.valid"> Entrar factura </button>
-        </p>
-      </form>
-      <p>
-        Form Status: {{ billForm.status }}
-    </div>
+
+<h1><p>Introducció de factura</p></h1>
+<form [formGroup]="billForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label>
+      Nº de factura:
+      <input type = text class="form-control" formControlName="billNumber">
+    </label>
   </div>
-</div>
+  <div class="form-group">
+    <label>
+      Edició Pallars de Foc:
+      <input type = text class="form-control" formControlName="edition">
+    </label>
+  </div>
+  <div class="form-group">
+    <label>
+      Data de la factura:
+      <input type = date class="form-control" formControlName="date">
+    </label>
+  </div>
+  <div class="form-group">
+    <label>
+      Emisor de la factura:
+      <input type = text class="form-control" formControlName="from">
+    </label>
+  </div>
+  <div class="form-group">
+    <label>
+      Factura adreçada a:
+      <input type = text class="form-control" formControlName="toorg">
+    </label>
+  </div>
+  <div class="form-group">
+    <label>
+      Concepte de la factura:
+      <input type = text class="form-control" formControlName="concept">
+    </label>
+  </div>
+  <div class="form-group">
+    <label>
+      Total factura SENSE impostos (sense IVA):
+      <input type = number formControlName="totalBT"> €
+    </label>
+  </div>
+  <div class="form-group">
+    <label>
+      Total impostos (IVA):
+      <input type = number formControlName="taxes"> €
+    </label>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlFile1">Adjuntar la factura</label>
+    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+  </div>
+  <div class="form-group">
+    <label>
+      Commentaris:
+      <textarea type = text class="form-control" formControlName="comments"  placeholder="Introdueix comentaris. No és obligatori" rows="3"></textarea>
+    </label>
+  </div>
+  <p>
+    <button type = submit [disabled]="!billForm.valid"> Entrar factura </button>
+  </p>
+</form>
+<p>
+  Form Status: {{ billForm.status }}
 

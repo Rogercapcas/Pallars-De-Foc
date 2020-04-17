@@ -9,8 +9,8 @@ import { Budget } from '../../models/budget';
 export class BudgetEditComponent {
   budged: Budget;
 
-  constructor(b: Budget) {
+  /*constructor(b: Budget) {
     this.budged = b;
-  }
+  }*/
 
 }
