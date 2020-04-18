@@ -8,7 +8,7 @@ import { Bill } from '../../models/bill';
   templateUrl: './bill-input.component.html',
   styleUrls: ['./bill-input.component.css']
 })
-export class BillInputComponent implements OnInit{
+export class BillInputComponent implements OnInit {
   bill: Bill;
   billForm: FormGroup;
   submitted = false;

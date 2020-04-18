@@ -37,7 +37,7 @@ export class Budget {
   public dOthers: number;
 
   // Group 6: Compensations (c)
-  public cGivenServices: number;
+  public cServicesRecived: number;
   public cGoods: number;
   public cFoodDrinkSleep: number;
   public cTransport: number;
@@ -64,15 +64,15 @@ export class Budget {
   // Group 10: Main activity (ma)
   public maGoods: number; // Piro, pólvora, etc...
   public maInfraestructure: number; // Masses, paraigües, etc...
-  public maEnsurance: number;
+  public maInsurance: number;
   public maFungible: number;
   public maOthers: number;
 
   // Group 11: Others (o)
-  public oEnsurance: number;
+  public oInsurance: number;
   public oFungible: number;
   public oSponsorsMarketing: number; // cartells patrocinadors
-  public oAccreditationsAndStuff: number; // Acreditacions, samarretes, liners, etc... per la organització i convidats
+  public oAccreditationsAndStaff: number; // Acreditacions, samarretes, liners, etc... per la organització i convidats
 
   public comments?: string;
 
