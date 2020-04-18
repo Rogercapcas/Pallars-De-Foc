@@ -1,3 +1,18 @@
+.greenhead{
+  background-color: darkgreen;
+  color: white;
+}
+
+.redhead{
+  background-color: darkred;
+  color: white;
+}
+
+.rightalign{
+  position: absolute;
+  right: 0px;
+}
+
 /*div.input-group-option:last-child span.input-group-addon-remove{
   display: none;
 }
