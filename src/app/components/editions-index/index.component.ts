@@ -28,6 +28,11 @@ export class IndexComponent implements OnInit {
       }
     });
   }
+
+  createEdition(url) {
+    this.router.navigate([url]);
+  }
+
   getEditions(): void {
     this.editions = this.editionsSService.getEditions();
   }

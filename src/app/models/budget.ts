@@ -3,9 +3,8 @@ import {getLocaleDateFormat} from '@angular/common';
 import {Validators} from '@angular/forms';
 
 export class Budget {
-  public edition: Edition;
   public totalAmount = 0.0;
-  public creationDate: string;
+  public creationDate: Date;
   // INCOMES
   // Group 1: public founds (pf)
   public pfGrants: number;
@@ -77,10 +76,54 @@ export class Budget {
 
   public comments?: string;
 
-  constructor(edition: Edition, date: string, comments: string) {
-    this.edition = edition;
-    this.creationDate = date;
-    this.comments = comments;
+  constructor() {
+    this.creationDate = new Date();
+    this.comments = '';
+    this.pfGrants = 0;
+    this.pfBills = 0;
+    this.pfOthers = 0;
+    this.pcCapital = 0;
+    this.pcKind = 0;
+    this.pcOthers = 0;
+    this.sBar = 0;
+    this.sMerchandising = 0;
+    this.sTicketsQuotes = 0;
+    this.sOthers = 0;
+    this.ownFunds = 0;
+    this.dPosters = 0;
+    this.dDesign = 0;
+    this.dDigitalMedia = 0;
+    this.dTraditionalMedia = 0;
+    this.dMerchandising = 0;
+    this.dGiftsSouvenirsPrizes = 0;
+    this.dWeb = 0;
+    this.dOthers = 0;
+    this.cServicesRecived = 0;
+    this.cGoods = 0;
+    this.cFoodDrinkSleep = 0;
+    this.cTransport = 0;
+    this.cOthers = 0;
+    this.rInfraestructures = 0;
+    this.rForniture = 0;
+    this.rOthers = 0;
+    this.hArtists = 0;
+    this.hServices = 0;
+    this.hLightSoundSystem = 0;
+    this.hOthers = 0;
+    this.bGoods = 0;
+    this.bGlasses = 0;
+    this.bForniture = 0;
+    this.bTickets = 0;
+    this.bOthers = 0;
+    this.maGoods = 0;
+    this.maInfraestructure = 0;
+    this.maInsurance = 0;
+    this.maFungible = 0;
+    this.maOthers = 0;
+    this.oInsurance = 0;
+    this.oFungible = 0;
+    this.oSponsorsMarketing = 0;
+    this.oAccreditationsAndStaff = 0;
   }
 
   setConcepts(pfGrants: number,

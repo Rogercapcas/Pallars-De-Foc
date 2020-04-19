@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Budget } from '../../models/budget';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Edition} from '../../models/edition';
+import validate = WebAssembly.validate;
 
 
 @Component({
@@ -10,6 +11,7 @@ import {Edition} from '../../models/edition';
   styleUrls: ['./budget-edit.component.css']
 })
 export class BudgetEditComponent implements OnInit {
+  edition: Edition;
   budget: Budget;
   budgetForm: FormGroup;
   submitted = false;
@@ -18,51 +20,51 @@ export class BudgetEditComponent implements OnInit {
 
   ngOnInit(): void {
     this.budgetForm = this.fb.group({
-      pfGrants: ['', Validators.required],
-      pfBills: ['', Validators.required],
-      pfOthers: ['', Validators.required],
-      pcCapital: ['', Validators.required],
-      pcKind: ['', Validators.required],
-      pcOthers: ['', Validators.required],
-      sBar: ['', Validators.required],
-      sMerchandising: ['', Validators.required],
+      pfGrants: [this.edition.budget.pfGrants, Validators.required],
+      pfBills: [this.edition.budget.pfBills, Validators.required],
+      pfOthers: [this.edition.budget.pfOthers, Validators.required],
+      pcCapital: [this.edition.budget.pcCapital, Validators.required],
+      pcKind: [this.edition.budget.pcKind, Validators.required],
+      pcOthers: [this.edition.budget.pcOthers, Validators.required],
+      sBar: [this.edition.budget.sBar, Validators.required],
+      sMerchandising: [this.edition.budget.sMerchandising, Validators.required],
       sTicketsQuotes: ['', Validators.required],
-      sOthers: ['', Validators.required],
-      ownFunds: ['', Validators.required],
-      dPosters: ['', Validators.required],
-      dDesign: ['', Validators.required],
-      dDigitalMedia: ['', Validators.required],
-      dTraditionalMedia: ['', Validators.required],
-      dMerchandising: ['', Validators.required],
-      dGiftsSouvenirsPrizes: ['', Validators.required],
-      dWeb: ['', Validators.required],
-      dOthers: ['', Validators.required],
-      cServicesRecived: ['', Validators.required],
-      cGoods: ['', Validators.required],
-      cFoodDrinkSleep: ['', Validators.required],
-      cTransport: ['', Validators.required],
-      cOthers: ['', Validators.required],
-      rInfraestructures: ['', Validators.required],
-      rForniture: ['', Validators.required],
-      rOthers: ['', Validators.required],
-      hArtists: ['', Validators.required],
-      hServices: ['', Validators.required],
-      hLightSoundSystem: ['', Validators.required],
-      hOthers: ['', Validators.required],
-      bGoods: ['', Validators.required],
-      bGlasses: ['', Validators.required],
-      bForniture: ['', Validators.required],
-      bTickets: ['', Validators.required],
-      bOthers: ['', Validators.required],
-      maGoods: ['', Validators.required],
-      maInfraestructure: ['', Validators.required],
-      maInsurance: ['', Validators.required],
-      maFungible: ['', Validators.required],
-      maOthers: ['', Validators.required],
-      oInsurance: ['', Validators.required],
-      oFungible: ['', Validators.required],
-      oSponsorsMarketing: ['', Validators.required],
-      oAccreditationsAndStaff: ['', Validators.required]
+      sOthers: [this.edition.budget.sOthers, Validators.required],
+      ownFunds: [this.edition.budget.ownFunds, Validators.required],
+      dPosters: [this.edition.budget.dPosters, Validators.required],
+      dDesign: [this.edition.budget.dDesign, Validators.required],
+      dDigitalMedia: [this.edition.budget.dDigitalMedia, Validators.required],
+      dTraditionalMedia: [this.edition.budget.dTraditionalMedia, Validators.required],
+      dMerchandising: [this.edition.budget.dMerchandising, Validators.required],
+      dGiftsSouvenirsPrizes: [this.edition.budget.dGiftsSouvenirsPrizes, Validators.required],
+      dWeb: [this.edition.budget.dWeb, Validators.required],
+      dOthers: [this.edition.budget.dOthers, Validators.required],
+      cServicesRecived: [this.edition.budget.cServicesRecived, Validators.required],
+      cGoods: [this.edition.budget.cGoods, Validators.required],
+      cFoodDrinkSleep: [this.edition.budget.cFoodDrinkSleep, Validators.required],
+      cTransport: [this.edition.budget.cTransport, Validators.required],
+      cOthers: [this.edition.budget.cOthers, Validators.required],
+      rInfraestructures: [this.edition.budget.rInfraestructures, Validators.required],
+      rForniture: [this.edition.budget.rForniture, Validators.required],
+      rOthers: [this.edition.budget.rOthers, Validators.required],
+      hArtists: [this.edition.budget.hArtists, Validators.required],
+      hServices: [this.edition.budget.hServices, Validators.required],
+      hLightSoundSystem: [this.edition.budget.hLightSoundSystem, Validators.required],
+      hOthers: [this.edition.budget.hOthers, Validators.required],
+      bGoods: [this.edition.budget.bGoods, Validators.required],
+      bGlasses: [this.edition.budget.bGlasses, Validators.required],
+      bForniture: [this.edition.budget.bForniture, Validators.required],
+      bTickets: [this.edition.budget.bTickets, Validators.required],
+      bOthers: [this.edition.budget.bOthers, Validators.required],
+      maGoods: [this.edition.budget.maGoods, Validators.required],
+      maInfraestructure: [this.edition.budget.maInsurance, Validators.required],
+      maInsurance: [this.edition.budget.maInsurance, Validators.required],
+      maFungible: [this.edition.budget.maFungible, Validators.required],
+      maOthers: [this.edition.budget.maOthers, Validators.required],
+      oInsurance: [this.edition.budget.oInsurance, Validators.required],
+      oFungible: [this.edition.budget.oFungible, Validators.required],
+      oSponsorsMarketing: [this.edition.budget.oSponsorsMarketing, Validators.required],
+      oAccreditationsAndStaff: [this.edition.budget.oAccreditationsAndStaff, Validators.required]
 
     });
   }
@@ -74,7 +76,7 @@ export class BudgetEditComponent implements OnInit {
     console.log('submitted value changed to True');
 
     console.log('Creating a budget');
-    this.budget = new Budget(new Edition(2020, 'V'), '22/09/2020', 'x');
+    this.budget = this.edition.budget;
     if (this.budgetForm.invalid) {
       console.log('something wrong makes the form invalid');
       return; }
@@ -132,53 +134,6 @@ export class BudgetEditComponent implements OnInit {
       this.budgetForm.value.oFungible,
       this.budgetForm.value.oSponsorsMarketing,
       this.budgetForm.value.oAccreditationsAndStaff);
-    /*this.budget.pfGrants = this.budgetForm.value.pfGrants;
-    this.budget.pfBills = this.budgetForm.value.pfBills;
-    this.budget.pfOthers = this.budgetForm.value.pfOthers;
-    this.budget.pcCapital = this.budgetForm.value.pcCapital;
-    this.budget.pcKind = this.budgetForm.value.pcKind;
-    this.budget.pcOthers = this.budgetForm.value.pcOthers;
-    this.budget.sBar = this.budgetForm.value.sBar;
-    this.budget.sMerchandising = this.budgetForm.value.sMerchandising;
-    this.budget.sTicketsQuotes = this.budgetForm.value.sTicketsQuotes;
-    this.budget.sOthers = this.budgetForm.value.sOthers;
-    this.budget.ownFunds = this.budgetForm.value.ownFunds;
-    console.log('Income attributes filled');
-    console.log('Starting to fill the outome attributes');
-    this.budget.dPosters = this.budgetForm.value.dPosters;
-    this.budget.dDesign = this.budgetForm.value.dDesign;
-    this.budget.dDigitalMedia = this.budgetForm.value.dDigitalMedia;
-    this.budget.dTraditionalMedia = this.budgetForm.value.dTraditionalMedia;
-    this.budget.dMerchandising = this.budgetForm.value.dMerchandising;
-    this.budget.dGiftsSouvenirsPrizes = this.budgetForm.value.dGiftsSouvenirsPrizes;
-    this.budget.dWeb = this.budgetForm.value.dWeb;
-    this.budget.dOthers = this.budgetForm.value.dOthers;
-    this.budget.cServicesRecived = this.budgetForm.value.cServicesRecived;
-    this.budget.cGoods = this.budgetForm.value.cGoods;
-    this.budget.cFoodDrinkSleep = this.budgetForm.value.cFoodDrinkSleep;
-    this.budget.cTransport = this.budgetForm.value.cTransport;
-    this.budget.cOthers = this.budgetForm.value.cOthers;
-    this.budget.rInfraestructures = this.budgetForm.value.rInfraestructures;
-    this.budget.rForniture = this.budgetForm.value.rForniture;
-    this.budget.rOthers = this.budgetForm.value.rOthers;
-    this.budget.hArtists = this.budgetForm.value.hArtists;
-    this.budget.hServices = this.budgetForm.value.hServices;
-    this.budget.hLightSoundSystem = this.budgetForm.value.hLightSoundSystem;
-    this.budget.hOthers = this.budgetForm.value.hOthers;
-    this.budget.bGoods = this.budgetForm.value.bGoods;
-    this.budget.bGlasses = this.budgetForm.value.bGlasses;
-    this.budget.bForniture = this.budgetForm.value.bForniture;
-    this.budget.bTickets = this.budgetForm.value.bTickets;
-    this.budget.bOthers = this.budgetForm.value.bOthers;
-    this.budget.maGoods = this.budgetForm.value.maGoods;
-    this.budget.maInfraestructure = this.budgetForm.value.maInfraestructure;
-    this.budget.maInsurance = this.budgetForm.value.maInsurance;
-    this.budget.maFungible = this.budgetForm.value.maFungible;
-    this.budget.maOthers = this.budgetForm.value.maOthers;
-    this.budget.oInsurance = this.budgetForm.value.oInsurance;
-    this.budget.oFungible = this.budgetForm.value.oFungible;
-    this.budget.oSponsorsMarketing = this.budgetForm.value.oSponsorsMarketing;
-    this.budget.oAccreditationsAndStaff = this.budgetForm.value.oAccreditationsAndStaff;*/
     console.log('Outcome attributes filled');
   }
 

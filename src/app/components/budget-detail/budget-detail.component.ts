@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import { Budget } from '../../models/budget';
+import {Edition} from '../../models/edition';
 
 @Component({
   selector: 'app-budget-detail',
@@ -7,11 +8,17 @@ import { Budget } from '../../models/budget';
   styleUrls: ['./budget-detail.component.css']
 })
 export class BudgetDetailComponent implements OnInit {
-  @Input() budget: Budget;
+  @Input() edition = new Edition(2021, 'V');
+  budget = this.edition.budget;
+  edit = false;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit() {
+    this.edit = true;
   }
 
 }

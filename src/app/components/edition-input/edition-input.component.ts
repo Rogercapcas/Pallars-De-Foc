@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Edition} from '../../models/edition';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-edition-input',
@@ -11,7 +12,7 @@ export class EditionInputComponent implements OnInit {
   edition: Edition;
   editionForm: FormGroup;
   submitted = false;
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private router: Router) { }
 
   ngOnInit() {
     this.editionForm = this.fb.group({
@@ -25,5 +26,7 @@ export class EditionInputComponent implements OnInit {
     this.submitted = true;
     this.edition = new Edition(this.editionForm.value.year, this.editionForm.value.name);
     console.log(this.editionForm);
+    this.router.navigate(['index']);
+    return this.edition;
   }
 }

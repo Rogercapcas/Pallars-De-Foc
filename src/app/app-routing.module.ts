@@ -14,6 +14,7 @@ import {SidebarComponent} from './components/sidebar/sidebar.component';
 import {BillsComponent} from './components/bills/bills.component';
 import {BudgetsComponent} from './components/budgets/budgets.component';
 import {BudgetDetailComponent} from './components/budget-detail/budget-detail.component';
+import {EditionInputComponent} from './components/edition-input/edition-input.component';
 
 const routes: Routes = [
   {path : '', component: IndexComponent},
@@ -30,6 +31,7 @@ const routes: Routes = [
   {path: 'sidebar', component: SidebarComponent},
   {path: 'bills', component: BillsComponent},
   {path: 'budgets', component: BudgetsComponent},
+  {path: 'editioninput', component: EditionInputComponent},
   {path: '**', component: AppBaseComponent},
 ];
 

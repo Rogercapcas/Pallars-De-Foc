@@ -2,5 +2,5 @@
 <li *ngFor="let budget of budgets"
     [class.selected]="budget === selectedBudget"
     (click)="onSelect(budget)">
-  <span> Nom: {{budget.name}}, Edició: {{budget.edition}}, <span *ngIf="budget.aproved"> Pressupost aprovat</span> </span>
+  <span> Edició: {{budget.edition}}</span>
 </li>

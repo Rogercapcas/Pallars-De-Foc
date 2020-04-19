@@ -12,9 +12,5 @@
     </label>
     <input type = text class = "form-control" formControlName="name">
   </div>
-  <div class="form-group">
-    <label>
-      Introdueix els responsables del Pallars de foc:
-    </label>
-  </div>
+  <button [disabled]="!editionForm.valid" (click)="onSubmit()"> Crear edició </button>
 </form>
