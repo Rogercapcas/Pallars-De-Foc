@@ -13,7 +13,6 @@ export class BillInputComponent implements OnInit {
   billForm: FormGroup;
   submitted = false;
 
-
   constructor(private fb: FormBuilder) { }
 
   ngOnInit() {

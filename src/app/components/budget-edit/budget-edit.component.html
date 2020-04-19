@@ -1,353 +1,355 @@
 <h1><p>Edició del pressupost</p></h1>
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-6">
-      <table class="table striped-table">
-        <thead class="greenhead">
+<form [formGroup]="budgetForm" (ngSubmit)="onSubmit()">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-6">
+        <table class="table striped-table">
+          <thead class="greenhead">
+            <tr>
+              <th>Ingressos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th><h3>Fons Públics</h3></th>
+            </tr>
+            <tr>
+              <div class="form-group">
+                <label>
+                  <span>Subvencions</span>
+                </label>
+                <span class="rightalign"><input [defaultValue]="0" type="number" formControlName="pfGrants">  €</span>
+              </div>
+              <div class="form-group">
+                <label>
+                  <span>Factures</span>
+                </label>
+                <span class="rightalign"><input type="number" formControlName="pfBills" [defaultValue]="0">  €</span>
+              </div>
+              <div class="form-group">
+                <label>
+                  <span>Altres</span>
+                </label>
+                <span class="rightalign"><input type="number" formControlName="pfOthers" [defaultValue]="0">  €</span>
+              </div>
+            </tr>
+            <tr>
+              <th><h3>Aportacions privades</h3></th>
+            </tr>
+            <tr>
+              <div class="form-group">
+                <label>
+                  <span>Aportacions de capital (p.e.: patrocinadors)</span>
+                </label>
+                <span class="rightalign"><input type="number" formControlName="pcCapital" [defaultValue]="0">  €</span>
+              </div>
+              <div class="form-group">
+                <label>
+                  <span>Espècies</span>
+                </label>
+                <span class="rightalign"><input type="number" formControlName="pcKind" [defaultValue]="0">  €</span>
+              </div>
+              <div class="form-group">
+                <label>
+                  <span>Altres</span>
+                </label>
+                <span class="rightalign"><input type="number" formControlName="pcOthers" [defaultValue]="0">  €</span>
+              </div>
+            </tr>
+            <tr>
+              <th><h3>Venda</h3></th>
+            </tr>
+            <tr>
+              <div class="form-group">
+                <label>
+                  <span>Servei de barra</span>
+                </label>
+                <span class="rightalign"><input type="number" formControlName="sBar" [defaultValue]="0">  €</span>
+              </div>
+              <div class="form-group">
+                <label>
+                  <span>Merchandising</span>
+                </label>
+                <span class="rightalign"><input type="number" formControlName="sMerchandising" [defaultValue]="0">  €</span>
+              </div>
+              <div class="form-group">
+                <label>
+                  <span>Entrades/Quotes</span>
+                </label>
+                <span class="rightalign"><input type="number" formControlName="sTicketsQuotes" [defaultValue]="0">  €</span>
+              </div>
+              <div class="form-group">
+                <label>
+                  <span>Altres</span>
+                </label>
+                <span class="rightalign"><input type="number" formControlName="sOthers" [defaultValue]="0">  €</span>
+              </div>
+            </tr>
+            <tr>
+              <th><h3>Fons propis</h3></th>
+            </tr>
+            <tr>
+              <div class="form-group">
+                <label>
+                  <span>Aportació de fons propis</span>
+                </label>
+                <span class="rightalign"><input type="number" formControlName="ownFunds" [defaultValue]="0">  €</span>
+              </div>
+            </tr>
+          </tbody>
+      </table>
+      </div>
+      <div class="col-6">
+        <table class="table striped-table">
+          <thead class="redhead">
+            <tr>
+              <th>Despeses</th>
+            </tr>
+          </thead>
+          <tbody>
           <tr>
-            <th>Ingressos</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th><h3>Fons Públics</h3></th>
+            <th><h3>Difusió</h3></th>
           </tr>
           <tr>
             <div class="form-group">
               <label>
-                <span>Subvencions</span>
+                <span>Cartelleria</span>
               </label>
-              <span class="rightalign"><input type="number" formControlName="pfGrants" [defaultValue]="0">  €</span>
+              <span class="rightalign"><input type="number" formControlName="dPosters" [defaultValue]="0">  €</span>
             </div>
             <div class="form-group">
               <label>
-                <span>Factures</span>
+                <span>Disseny/Edició</span>
               </label>
-              <span class="rightalign"><input type="number" formControlName="pfBills" [defaultValue]="0">  €</span>
+              <span class="rightalign"><input type="number" formControlName="dDesign" [defaultValue]="0">  €</span>
             </div>
             <div class="form-group">
               <label>
-                <span>Altres</span>
+                <span>Mitjans de comunicació digitals</span>
               </label>
-              <span class="rightalign"><input type="number" formControlName="pfOthers" [defaultValue]="0">  €</span>
-            </div>
-          </tr>
-          <tr>
-            <th><h3>Aportacions privades</h3></th>
-          </tr>
-          <tr>
-            <div class="form-group">
-              <label>
-                <span>Aportacions de capital (p.e.: patrocinadors)</span>
-              </label>
-              <span class="rightalign"><input type="number" formControlName="pcCapital" [defaultValue]="0">  €</span>
+              <span class="rightalign"><input type="number" formControlName="dDigitalMedia" [defaultValue]="0">  €</span>
             </div>
             <div class="form-group">
               <label>
-                <span>Espècies</span>
+                <span>Mitjans de comunicació tradicionas</span>
               </label>
-              <span class="rightalign"><input type="number" formControlName="pcKind" [defaultValue]="0">  €</span>
-            </div>
-            <div class="form-group">
-              <label>
-                <span>Altres</span>
-              </label>
-              <span class="rightalign"><input type="number" formControlName="pcOthers" [defaultValue]="0">  €</span>
-            </div>
-          </tr>
-          <tr>
-            <th><h3>Venda</h3></th>
-          </tr>
-          <tr>
-            <div class="form-group">
-              <label>
-                <span>Servei de barra</span>
-              </label>
-              <span class="rightalign"><input type="number" formControlName="sBar" [defaultValue]="0">  €</span>
+              <span class="rightalign"><input type="number" formControlName="dTraditionalMedia" [defaultValue]="0">  €</span>
             </div>
             <div class="form-group">
               <label>
                 <span>Merchandising</span>
               </label>
-              <span class="rightalign"><input type="number" formControlName="sMerchandising" [defaultValue]="0">  €</span>
+              <span class="rightalign"><input type="number" formControlName="dMerchandising" [defaultValue]="0">  €</span>
             </div>
             <div class="form-group">
               <label>
-                <span>Entrades/Quotes</span>
+                <span>Obsequis/records/premis</span>
               </label>
-              <span class="rightalign"><input type="number" formControlName="sTicketsQuotes" [defaultValue]="0">  €</span>
+              <span class="rightalign"><input type="number" formControlName="dGiftsSouvenirsPrizes" [defaultValue]="0">  €</span>
+            </div>
+            <div class="form-group">
+              <label>
+                <span>Disseny i manteniment web</span>
+              </label>
+              <span class="rightalign"><input type="number" formControlName="dWeb" [defaultValue]="0">  €</span>
             </div>
             <div class="form-group">
               <label>
                 <span>Altres</span>
               </label>
-              <span class="rightalign"><input type="number" formControlName="sOthers" [defaultValue]="0">  €</span>
+              <span class="rightalign"><input type="number" formControlName="dOthers" [defaultValue]="0">  €</span>
             </div>
           </tr>
           <tr>
-            <th><h3>Fons propis</h3></th>
+            <th><h3>Compensasions</h3></th>
           </tr>
           <tr>
             <div class="form-group">
               <label>
-                <span>Aportació de fons propis</span>
+                <span>Per prestació de servei aliè</span>
               </label>
-              <span class="rightalign"><input type="number" formControlName="ownFunds" [defaultValue]="0">  €</span>
+              <span class="rightalign"><input type="number" formControlName="cServicesRecived" [defaultValue]="0">  €</span>
             </div>
-          </tr>
-        </tbody>
-    </table>
-    </div>
-    <div class="col-6">
-      <table class="table striped-table">
-        <thead class="redhead">
+            <div class="form-group">
+              <label>
+                <span>Materia primera</span>
+              </label>
+              <span class="rightalign"><input type="number" formControlName="cGoods" [defaultValue]="0">  €</span>
+            </div>
+            <div class="form-group">
+              <label>
+                <span>Dietes</span>
+              </label>
+              <span class="rightalign"><input type="number" formControlName="cFoodDrinkSleep" [defaultValue]="0">  €</span>
+            </div>
+            <div class="form-group">
+              <label>
+                <span>Transport/Desplaçament</span>
+              </label>
+              <span class="rightalign"><input type="number" formControlName="cTransport" [defaultValue]="0">  €</span>
+            </div>
+            <div class="form-group">
+              <label>
+                <span>Altres</span>
+              </label>
+              <span class="rightalign"><input type="number" formControlName="cOthers" [defaultValue]="0">  €</span>
+            </div>
           <tr>
-            <th>Despeses</th>
+            <th><h3>Lloguers</h3></th>
           </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <th><h3>Difusió</h3></th>
-        </tr>
-        <tr>
-          <div class="form-group">
-            <label>
-              <span>Cartelleria</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="dPosters" [defaultValue]="0">  €</span>
-          </div>
-          <div class="form-group">
-            <label>
-              <span>Disseny/Edició</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="dDesign" [defaultValue]="0">  €</span>
-          </div>
-          <div class="form-group">
-            <label>
-              <span>Mitjans de comunicació digitals</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="dDigitalMedia" [defaultValue]="0">  €</span>
-          </div>
-          <div class="form-group">
-            <label>
-              <span>Mitjans de comunicació tradicionas</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="dTraditionalMedia" [defaultValue]="0">  €</span>
-          </div>
-          <div class="form-group">
-            <label>
-              <span>Merchandising</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="dMerchandising" [defaultValue]="0">  €</span>
-          </div>
-          <div class="form-group">
-            <label>
-              <span>Obsequis/records/premis</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="dGiftsSouvenirsPrizes" [defaultValue]="0">  €</span>
-          </div>
-          <div class="form-group">
-            <label>
-              <span>Disseny i manteniment web</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="dWeb" [defaultValue]="0">  €</span>
-          </div>
-          <div class="form-group">
-            <label>
-              <span>Altres</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="dOthers" [defaultValue]="0">  €</span>
-          </div>
-        </tr>
-        <tr>
-          <th><h3>Compensasions</h3></th>
-        </tr>
-        <tr>
-          <div class="form-group">
-            <label>
-              <span>Per prestació de servei aliè</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="cServicesRecived" [defaultValue]="0">  €</span>
-          </div>
-          <div class="form-group">
-            <label>
-              <span>Materia primera</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="cGoods" [defaultValue]="0">  €</span>
-          </div>
-          <div class="form-group">
-            <label>
-              <span>Dietes</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="cFoodDrinksSleep" [defaultValue]="0">  €</span>
-          </div>
-          <div class="form-group">
-            <label>
-              <span>Transport/Desplaçament</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="cTransport" [defaultValue]="0">  €</span>
-          </div>
-          <div class="form-group">
-            <label>
-              <span>Altres</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="cOthers" [defaultValue]="0">  €</span>
-          </div>
-        <tr>
-          <th><h3>Lloguers</h3></th>
-        </tr>
-        <tr>
-          <div class="form-group">
-            <label>
-              <span>Infraestructura</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="rInfraestructures" [defaultValue]="0">  €</span>
-          </div>
-          <div class="form-group">
-            <label>
-              <span>Mobiliari</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="rForniture" [defaultValue]="0">  €</span>
-          </div>
-          <div class="form-group">
-            <label>
-              <span>Altres</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="rOthers" [defaultValue]="0">  €</span>
-          </div>
-        <tr>
-          <th><h3>Contractacions</h3></th>
-        </tr>
-        <tr>
-          <div class="form-group">
-            <label>
-              <span>Artistes</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="hArtists" [defaultValue]="0">  €</span>
-          </div>
-          <div class="form-group">
-            <label>
-              <span>Serveis</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="hServices" [defaultValue]="0">  €</span>
-          </div>
-          <div class="form-group">
-            <label>
-              <span>Equips de so/llum</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="hLightSoundSystem" [defaultValue]="0">  €</span>
-          </div>
-          <div class="form-group">
-            <label>
-              <span>Altres</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="hOthers" [defaultValue]="0">  €</span>
-          </div>
-        <tr>
-          <th><h3>Servei de barra</h3></th>
-        </tr>
-        <tr>
-          <div class="form-group">
-            <label>
-              <span>Consumibles (beure, menjar, gel, ...)</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="bGoods" [defaultValue]="0">  €</span>
-          </div>
-          <div class="form-group">
-            <label>
-              <span>Gots</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="bGlasses" [defaultValue]="0">  €</span>
-          </div>
-          <div class="form-group">
-            <label>
-              <span>Equipament</span>
-            </label>
-            <span class="rightalign"><input type="number"  formControlName="bForniture" [defaultValue]="0">  €</span>
-          </div>
-          <div class="form-group">
-            <label>
-              <span>Tickets</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="bTickets" [defaultValue]="0">  €</span>
-          </div>
-          <div class="form-group">
-            <label>
-              <span>Altres</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="bOthers" [defaultValue]="0">  €</span>
-          </div>
-        <tr>
-          <th><h3>Activitats pròpies</h3></th>
-        </tr>
-        <tr>
-          <div class="form-group">
-            <label>
-              <span>Pirotècnia</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="maGoods" [defaultValue]="0">  €</span>
-          </div>
-          <div class="form-group">
-            <label>
-              <span>Assegurança</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="maInsurance" [defaultValue]="0">  €</span>
-          </div>
-          <div class="form-group">
-            <label>
-              <span>Infraestructura</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="maInfraestructure" [defaultValue]="0">  €</span>
-          </div>
-          <div class="form-group">
-            <label>
-              <span>Materiar fungible</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="maFungible" [defaultValue]="0">  €</span>
-          </div>
-          <div class="form-group">
-            <label>
-              <span>Altres</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="maOthers" [defaultValue]="0">  €</span>
-          </div>
-        <tr>
-          <th><h3>Altres despeses</h3></th>
-        </tr>
-        <tr>
-          <div class="form-group">
-            <label>
-              <span>Material fungible</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="oFungible" [defaultValue]="0">  €</span>
-          </div>
-          <div class="form-group">
-            <label>
-              <span>Acreditacions</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="oAccreditationsAndStaff" [defaultValue]="0">  €</span>
-          </div>
-          <div class="form-group">
-            <label>
-              <span>Assegurances</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="oInsurance" [defaultValue]="0">  €</span>
-          </div>
-          <div class="form-group">
-            <label>
-              <span>Publicitat patrocinadors</span>
-            </label>
-            <span class="rightalign"><input type="number" formControlName="oSponsorsMarketing" [defaultValue]="0">  €</span>
-          </div>
-        </tbody>
-      </table>
+          <tr>
+            <div class="form-group">
+              <label>
+                <span>Infraestructura</span>
+              </label>
+              <span class="rightalign"><input type="number" formControlName="rInfraestructures" [defaultValue]="0">  €</span>
+            </div>
+            <div class="form-group">
+              <label>
+                <span>Mobiliari</span>
+              </label>
+              <span class="rightalign"><input type="number" formControlName="rForniture" [defaultValue]="0">  €</span>
+            </div>
+            <div class="form-group">
+              <label>
+                <span>Altres</span>
+              </label>
+              <span class="rightalign"><input type="number" formControlName="rOthers" [defaultValue]="0">  €</span>
+            </div>
+          <tr>
+            <th><h3>Contractacions</h3></th>
+          </tr>
+          <tr>
+            <div class="form-group">
+              <label>
+                <span>Artistes</span>
+              </label>
+              <span class="rightalign"><input type="number" formControlName="hArtists" [defaultValue]="0">  €</span>
+            </div>
+            <div class="form-group">
+              <label>
+                <span>Serveis</span>
+              </label>
+              <span class="rightalign"><input type="number" formControlName="hServices" [defaultValue]="0">  €</span>
+            </div>
+            <div class="form-group">
+              <label>
+                <span>Equips de so/llum</span>
+              </label>
+              <span class="rightalign"><input type="number" formControlName="hLightSoundSystem" [defaultValue]="0">  €</span>
+            </div>
+            <div class="form-group">
+              <label>
+                <span>Altres</span>
+              </label>
+              <span class="rightalign"><input type="number" formControlName="hOthers" [defaultValue]="0">  €</span>
+            </div>
+          <tr>
+            <th><h3>Servei de barra</h3></th>
+          </tr>
+          <tr>
+            <div class="form-group">
+              <label>
+                <span>Consumibles (beure, menjar, gel, ...)</span>
+              </label>
+              <span class="rightalign"><input type="number" formControlName="bGoods" [defaultValue]="0">  €</span>
+            </div>
+            <div class="form-group">
+              <label>
+                <span>Gots</span>
+              </label>
+              <span class="rightalign"><input type="number" formControlName="bGlasses" [defaultValue]="0">  €</span>
+            </div>
+            <div class="form-group">
+              <label>
+                <span>Equipament</span>
+              </label>
+              <span class="rightalign"><input type="number"  formControlName="bForniture" [defaultValue]="0">  €</span>
+            </div>
+            <div class="form-group">
+              <label>
+                <span>Tickets</span>
+              </label>
+              <span class="rightalign"><input type="number" formControlName="bTickets" [defaultValue]="0">  €</span>
+            </div>
+            <div class="form-group">
+              <label>
+                <span>Altres</span>
+              </label>
+              <span class="rightalign"><input type="number" formControlName="bOthers" [defaultValue]="0">  €</span>
+            </div>
+          <tr>
+            <th><h3>Activitats pròpies</h3></th>
+          </tr>
+          <tr>
+            <div class="form-group">
+              <label>
+                <span>Pirotècnia</span>
+              </label>
+              <span class="rightalign"><input type="number" formControlName="maGoods" [defaultValue]="0">  €</span>
+            </div>
+            <div class="form-group">
+              <label>
+                <span>Assegurança</span>
+              </label>
+              <span class="rightalign"><input type="number" formControlName="maInsurance" [defaultValue]="0">  €</span>
+            </div>
+            <div class="form-group">
+              <label>
+                <span>Infraestructura</span>
+              </label>
+              <span class="rightalign"><input type="number" formControlName="maInfraestructure" [defaultValue]="0">  €</span>
+            </div>
+            <div class="form-group">
+              <label>
+                <span>Materiar fungible</span>
+              </label>
+              <span class="rightalign"><input type="number" formControlName="maFungible" [defaultValue]="0">  €</span>
+            </div>
+            <div class="form-group">
+              <label>
+                <span>Altres</span>
+              </label>
+              <span class="rightalign"><input type="number" formControlName="maOthers" [defaultValue]="0">  €</span>
+            </div>
+          <tr>
+            <th><h3>Altres despeses</h3></th>
+          </tr>
+          <tr>
+            <div class="form-group">
+              <label>
+                <span>Material fungible</span>
+              </label>
+              <span class="rightalign"><input type="number" formControlName="oFungible" [defaultValue]="0">  €</span>
+            </div>
+            <div class="form-group">
+              <label>
+                <span>Acreditacions</span>
+              </label>
+              <span class="rightalign"><input type="number" formControlName="oAccreditationsAndStaff" [defaultValue]=0>  €</span>
+            </div>
+            <div class="form-group">
+              <label>
+                <span>Assegurances</span>
+              </label>
+              <span class="rightalign"><input type="number" formControlName="oInsurance" [defaultValue]="0">  €</span>
+            </div>
+            <div class="form-group">
+              <label>
+                <span>Publicitat patrocinadors</span>
+              </label>
+              <span class="rightalign"><input type="number" formControlName="oSponsorsMarketing" [defaultValue]="0">  €</span>
+            </div>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
-</div>
-<button> Desa els canvis</button>
+</form>
+<button type = submit [disabled]="!budgetForm.valid"> Desa els canvis</button>
 <div><p>* Un cop desats els canvis el pressupost es podrà editar posteriorment.</p></div>
 <div><p>
-  Form Status: {{ budgetForm.value}}
+  Form Status: {{ budgetForm.status}}
 </p></div>
 <!-- https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_table_striped&stacked=h
       https://bootsnipp.com/snippets/ObMj8    PER FER UNA TAULA DINÀMICA-->

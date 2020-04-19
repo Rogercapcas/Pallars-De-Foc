@@ -76,8 +76,9 @@ export class Budget {
 
   public comments?: string;
 
-  constructor(edition: Edition, date: Date) {
+  constructor(edition: Edition, date: Date, comments: string) {
     this.edition = edition;
     this.creationDate = date;
+    this.comments = comments;
   }
 }
