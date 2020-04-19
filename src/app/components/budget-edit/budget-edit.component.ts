@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Budget } from '../../models/budget';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {Edition} from '../../models/edition';
 
 
 @Component({
@@ -65,24 +66,73 @@ export class BudgetEditComponent implements OnInit {
 
     });
   }
-  get f() { return this.budgetForm.controls; }
+  // get f() { return this.budgetForm.controls; }
 
   onSubmit() {
     console.log('It got into budget-edit onSubmit');
+    this.submitted = true;
+    console.log('submitted value changed to True');
+
+    console.log('Creating a budget');
+    this.budget = new Budget(new Edition(2020, 'V'), '22/09/2020', 'x');
     if (this.budgetForm.invalid) {
       console.log('something wrong makes the form invalid');
       return; }
-    this.submitted = true;
 
     if (this.budgetForm.invalid) {
       return;
     }
 
-    console.warn(this.budgetForm.value);
+    // console.warn(this.budgetForm.value);
     console.log('hola');
-    console.log(this.budgetForm);
+    // console.log(this.budgetForm);
     console.log('Starting to fill the income attributes');
-    this.budget.pfGrants = this.budgetForm.value.pfGrants;
+    this.budget.setConcepts(this.budgetForm.value.pfGrants,
+      this.budgetForm.value.pfBills,
+      this.budgetForm.value.pfOthers,
+      this.budgetForm.value.pcCapital,
+      this.budgetForm.value.pcKind,
+      this.budgetForm.value.pcOthers,
+      this.budgetForm.value.sBar,
+      this.budgetForm.value.sMerchandising,
+      this.budgetForm.value.sTicketsQuotes,
+      this.budgetForm.value.sOthers,
+      this.budgetForm.value.ownFunds,
+      this.budgetForm.value.dPosters,
+      this.budgetForm.value.dDesign,
+      this.budgetForm.value.dDigitalMedia,
+      this.budgetForm.value.dTraditionalMedia,
+      this.budgetForm.value.dMerchandising,
+      this.budgetForm.value.dGiftsSouvenirsPrizes,
+      this.budgetForm.value.dWeb,
+      this.budgetForm.value.dOthers,
+      this.budgetForm.value.cServicesRecived,
+      this.budgetForm.value.cGoods,
+      this.budgetForm.value.cFoodDrinkSleep,
+      this.budgetForm.value.cTransport,
+      this.budgetForm.value.cOthers,
+      this.budgetForm.value.rInfraestructures,
+      this.budgetForm.value.rForniture,
+      this.budgetForm.value.rOthers,
+      this.budgetForm.value.hArtists,
+      this.budgetForm.value.hServices,
+      this.budgetForm.value.hLightSoundSystem,
+      this.budgetForm.value.hOthers,
+      this.budgetForm.value.bGoods,
+      this.budgetForm.value.bGlasses,
+      this.budgetForm.value.bForniture,
+      this.budgetForm.value.bTickets,
+      this.budgetForm.value.bOthers,
+      this.budgetForm.value.maGoods,
+      this.budgetForm.value.maInfraestructure,
+      this.budgetForm.value.maInsurance,
+      this.budgetForm.value.maFungible,
+      this.budgetForm.value.maOthers,
+      this.budgetForm.value.oInsurance,
+      this.budgetForm.value.oFungible,
+      this.budgetForm.value.oSponsorsMarketing,
+      this.budgetForm.value.oAccreditationsAndStaff);
+    /*this.budget.pfGrants = this.budgetForm.value.pfGrants;
     this.budget.pfBills = this.budgetForm.value.pfBills;
     this.budget.pfOthers = this.budgetForm.value.pfOthers;
     this.budget.pcCapital = this.budgetForm.value.pcCapital;
@@ -128,7 +178,7 @@ export class BudgetEditComponent implements OnInit {
     this.budget.oInsurance = this.budgetForm.value.oInsurance;
     this.budget.oFungible = this.budgetForm.value.oFungible;
     this.budget.oSponsorsMarketing = this.budgetForm.value.oSponsorsMarketing;
-    this.budget.oAccreditationsAndStaff = this.budgetForm.value.oAccreditationsAndStaff;
+    this.budget.oAccreditationsAndStaff = this.budgetForm.value.oAccreditationsAndStaff;*/
     console.log('Outcome attributes filled');
   }
 
