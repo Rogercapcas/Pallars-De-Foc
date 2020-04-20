@@ -9,7 +9,8 @@ import {Edition} from '../../models/edition';
 })
 export class BudgetDetailComponent implements OnInit {
   @Input() edition = new Edition(2021, 'V');
-  budget = this.edition.budget;
+  editionControl: Edition;
+  budget: Budget;
   edit = false;
 
   constructor() { }
@@ -19,6 +20,7 @@ export class BudgetDetailComponent implements OnInit {
 
   onSubmit() {
     this.edit = true;
+    this.editionControl = this.edition;
   }
 
 }

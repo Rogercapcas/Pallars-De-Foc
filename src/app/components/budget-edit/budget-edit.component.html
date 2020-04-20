@@ -1,5 +1,5 @@
 <h1><p>Edició del pressupost</p></h1>
-<form [formGroup]="budgetForm" (ngSubmit)="onSubmit()">
+<form *ngIf="!submitted" [formGroup]="budgetForm" (ngSubmit)="onSubmit()">
   <div class="container-fluid">
     <div class="row">
       <div class="col-6">
@@ -345,13 +345,13 @@
       </div>
     </div>
   </div>
-  <button type = submit [disabled]="!budgetForm.valid"> Desa els canvis</button>
+  <!--<button type = submit [disabled]="!budgetForm.valid"> Desa els canvis</button>-->
+  <button type="submit" class="btn btn-success" [disabled]="!budgetForm.valid">Desar canvis</button>
 </form>
-<div><p>* Un cop desats els canvis el pressupost es podrà editar posteriorment.</p></div>
-<div><p>
+<!--<div><p>
   Form Status: {{ budgetForm.status}}
 </p></div><div><p>
   Submitted: {{ this.submitted.valueOf()}}
-</p></div>
+</p></div>-->
 <!-- https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_table_striped&stacked=h
       https://bootsnipp.com/snippets/ObMj8    PER FER UNA TAULA DINÀMICA-->

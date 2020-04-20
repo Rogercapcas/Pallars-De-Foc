@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { Budget } from '../../models/budget';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Edition} from '../../models/edition';
@@ -11,7 +11,7 @@ import validate = WebAssembly.validate;
   styleUrls: ['./budget-edit.component.css']
 })
 export class BudgetEditComponent implements OnInit {
-  edition: Edition;
+  @Input() edition: Edition;
   budget: Budget;
   budgetForm: FormGroup;
   submitted = false;
@@ -19,6 +19,9 @@ export class BudgetEditComponent implements OnInit {
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
+    console.log(this.budget);
+    this.budget = this.edition.budget;
+    console.log(this.budget);
     this.budgetForm = this.fb.group({
       pfGrants: [this.edition.budget.pfGrants, Validators.required],
       pfBills: [this.edition.budget.pfBills, Validators.required],

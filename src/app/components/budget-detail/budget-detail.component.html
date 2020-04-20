@@ -1,349 +1,352 @@
-<h1><p> Detall pressupost: </p></h1>
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-6">
-      <table class="table table-striped">
-        <thead class="greenhead">
-        <tr>
-          <th>Ingressos</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <th><h3>Fons Públics</h3></th>
-        </tr>
-        <tr>
-          <div>
-            <label>
-              <span>Subvencions</span>
-            </label>
-            <span class="rightalign"> {{this.budget.pfGrants}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Factures</span>
-            </label>
-            <span class="rightalign"><{{this.budget.pfBills}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Altres</span>
-            </label>
-            <span class="rightalign">{{this.budget.pfOthers}}</span>
-          </div>
-        </tr>
-        <tr>
-          <th><h3>Aportacions privades</h3></th>
-        </tr>
-        <tr>
-          <div>
-            <label>
-              <span>Aportacions de capital (p.e.: patrocinadors)</span>
-            </label>
-            <span class="rightalign">{{this.budget.pcCapital}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Espècies</span>
-            </label>
-            <span class="rightalign">{{this.budget.pcKind}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Altres</span>
-            </label>
-            <span class="rightalign">{{this.budget.pcOthers}}</span>
-          </div>
-        </tr>
-        <tr>
-          <th><h3>Venda</h3></th>
-        </tr>
-        <tr>
-          <div>
-            <label>
-              <span>Servei de barra</span>
-            </label>
-            <span class="rightalign">{{this.budget.sBar}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Merchandising</span>
-            </label>
-            <span class="rightalign">{{this.budget.sMerchandising}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Entrades/Quotes</span>
-            </label>
-            <span class="rightalign">{{this.budget.sTicketsQuotes}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Altres</span>
-            </label>
-            <span class="rightalign">{{this.budget.sOthers}}</span>
-          </div>
-        </tr>
-        <tr>
-          <th><h3>Fons propis</h3></th>
-        </tr>
-        <tr>
-          <div>
-            <label>
-              <span>Aportació de fons propis</span>
-            </label>
-            <span class="rightalign">{{this.budget.ownFunds}}</span>
-          </div>
-        </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="col-6">
-      <table class="table table-striped">
-        <thead class="redhead">
-        <tr>
-          <th>Despeses</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <th><h3>Difusió</h3></th>
-        </tr>
-        <tr>
-          <div>
-            <label>
-              <span>Cartelleria</span>
-            </label>
-            <span class="rightalign">{{this.budget.dPosters}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Disseny/Edició</span>
-            </label>
-            <span class="rightalign">{{this.budget.dDesign}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Mitjans de comunicació digitals</span>
-            </label>
-            <span class="rightalign">{{this.budget.dDigitalMedia}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Mitjans de comunicació tradicionas</span>
-            </label>
-            <span class="rightalign"><{{this.budget.dTraditionalMedia}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Merchandising</span>
-            </label>
-            <span class="rightalign">{{this.budget.dMerchandising}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Obsequis/records/premis</span>
-            </label>
-            <span class="rightalign">{{this.budget.dGiftsSouvenirsPrizes}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Disseny i manteniment web</span>
-            </label>
-            <span class="rightalign">{{this.budget.dWeb}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Altres</span>
-            </label>
-            <span class="rightalign">{{this.budget.dOthers}}</span>
-          </div>
-        </tr>
-        <tr>
-          <th><h3>Compensasions</h3></th>
-        </tr>
-        <tr>
-          <div>
-            <label>
-              <span>Per prestació de servei aliè</span>
-            </label>
-            <span class="rightalign">{{this.budget.cServicesRecived}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Materia primera</span>
-            </label>
-            <span class="rightalign">{{this.budget.cGoods}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Dietes</span>
-            </label>
-            <span class="rightalign">{{this.budget.cFoodDrinkSleep}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Transport/Desplaçament</span>
-            </label>
-            <span class="rightalign">{{this.budget.cTransport}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Altres</span>
-            </label>
-            <span class="rightalign">{{this.budget.cOthers}}</span>
-          </div>
-        <tr>
-          <th><h3>Lloguers</h3></th>
-        </tr>
-        <tr>
-          <div>
-            <label>
-              <span>Infraestructura</span>
-            </label>
-            <span class="rightalign">{{this.budget.rInfraestructures}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Mobiliari</span>
-            </label>
-            <span class="rightalign">{{this.budget.rForniture}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Altres</span>
-            </label>
-            <span class="rightalign">{{this.budget.rOthers}}</span>
-          </div>
-        <tr>
-          <th><h3>Contractacions</h3></th>
-        </tr>
-        <tr>
-          <div>
-            <label>
-              <span>Artistes</span>
-            </label>
-            <span class="rightalign">{{this.budget.hArtists}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Serveis</span>
-            </label>
-            <span class="rightalign">{{this.budget.hServices}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Equips de so/llum</span>
-            </label>
-            <span class="rightalign">{{this.budget.hLightSoundSystem}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Altres</span>
-            </label>
-            <span class="rightalign">{{this.budget.hOthers}}</span>
-          </div>
-        <tr>
-          <th><h3>Servei de barra</h3></th>
-        </tr>
-        <tr>
-          <div>
-            <label>
-              <span>Consumibles (beure, menjar, gel, ...)</span>
-            </label>
-            <span class="rightalign">{{this.budget.bGoods}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Gots</span>
-            </label>
-            <span class="rightalign">{{this.budget.bGlasses}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Equipament</span>
-            </label>
-            <span class="rightalign">{{this.budget.bForniture}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Tickets</span>
-            </label>
-            <span class="rightalign">{{this.budget.bTickets}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Altres</span>
-            </label>
-            <span class="rightalign">{{this.budget.bOthers}}</span>
-          </div>
-        <tr>
-          <th><h3>Activitats pròpies</h3></th>
-        </tr>
-        <tr>
-          <div>
-            <label>
-              <span>Pirotècnia</span>
-            </label>
-            <span class="rightalign">{{this.budget.maGoods}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Assegurança</span>
-            </label>
-            <span class="rightalign">{{this.budget.maInsurance}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Infraestructura</span>
-            </label>
-            <span class="rightalign">{{this.budget.maInsurance}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Materiar fungible</span>
-            </label>
-            <span class="rightalign">{{this.budget.maFungible}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Altres</span>
-            </label>
-            <span class="rightalign">{{this.budget.maOthers}}</span>
-          </div>
-        <tr>
-          <th><h3>Altres despeses</h3></th>
-        </tr>
-        <tr>
-          <div>
-            <label>
-              <span>Material fungible</span>
-            </label>
-            <span class="rightalign">{{this.budget.oFungible}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Acreditacions</span>
-            </label>
-            <span class="rightalign">{{this.budget.oAccreditationsAndStaff}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Assegurances</span>
-            </label>
-            <span class="rightalign">{{this.budget.oInsurance}}</span>
-          </div>
-          <div>
-            <label>
-              <span>Publicitat patrocinadors</span>
-            </label>
-            <span class="rightalign">{{this.budget.oSponsorsMarketing}}</span>
-          </div>
-        </tbody>
-      </table>
+<div *ngIf="!editionControl">
+  <h1><p> Detall pressupost: </p></h1>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-6">
+        <table class="table table-striped">
+          <thead class="greenhead">
+          <tr>
+            <th>Ingressos</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th><h3>Fons Públics</h3></th>
+          </tr>
+          <tr>
+            <div>
+                <span>Subvencions</span>
+              <span class="rightalign"> {{this.budget.pfGrants}}</span>
+            </div>
+            <div>
+                <span>Factures</span>
+                <span class="rightalign">{{this.budget.pfBills}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Altres</span>
+              </label>
+              <span class="rightalign">{{this.budget.pfOthers}}</span>
+            </div>
+          </tr>
+          <tr>
+            <th><h3>Aportacions privades</h3></th>
+          </tr>
+          <tr>
+            <div>
+              <label>
+                <span>Aportacions de capital (p.e.: patrocinadors)</span>
+              </label>
+              <span class="rightalign">{{this.budget.pcCapital}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Espècies</span>
+              </label>
+              <span class="rightalign">{{this.budget.pcKind}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Altres</span>
+              </label>
+              <span class="rightalign">{{this.budget.pcOthers}}</span>
+            </div>
+          </tr>
+          <tr>
+            <th><h3>Venda</h3></th>
+          </tr>
+          <tr>
+            <div>
+              <label>
+                <span>Servei de barra</span>
+              </label>
+              <span class="rightalign">{{this.budget.sBar}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Merchandising</span>
+              </label>
+              <span class="rightalign">{{this.budget.sMerchandising}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Entrades/Quotes</span>
+              </label>
+              <span class="rightalign">{{this.budget.sTicketsQuotes}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Altres</span>
+              </label>
+              <span class="rightalign">{{this.budget.sOthers}}</span>
+            </div>
+          </tr>
+          <tr>
+            <th><h3>Fons propis</h3></th>
+          </tr>
+          <tr>
+            <div>
+              <label>
+                <span>Aportació de fons propis</span>
+              </label>
+              <span class="rightalign">{{this.budget.ownFunds}}</span>
+            </div>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-6">
+        <table class="table table-striped">
+          <thead class="redhead">
+          <tr>
+            <th>Despeses</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th><h3>Difusió</h3></th>
+          </tr>
+          <tr>
+            <div>
+              <label>
+                <span>Cartelleria</span>
+              </label>
+              <span class="rightalign">{{this.budget.dPosters}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Disseny/Edició</span>
+              </label>
+              <span class="rightalign">{{this.budget.dDesign}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Mitjans de comunicació digitals</span>
+              </label>
+              <span class="rightalign">{{this.budget.dDigitalMedia}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Mitjans de comunicació tradicionas</span>
+              </label>
+              <span class="rightalign"><{{this.budget.dTraditionalMedia}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Merchandising</span>
+              </label>
+              <span class="rightalign">{{this.budget.dMerchandising}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Obsequis/records/premis</span>
+              </label>
+              <span class="rightalign">{{this.budget.dGiftsSouvenirsPrizes}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Disseny i manteniment web</span>
+              </label>
+              <span class="rightalign">{{this.budget.dWeb}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Altres</span>
+              </label>
+              <span class="rightalign">{{this.budget.dOthers}}</span>
+            </div>
+          </tr>
+          <tr>
+            <th><h3>Compensasions</h3></th>
+          </tr>
+          <tr>
+            <div>
+              <label>
+                <span>Per prestació de servei aliè</span>
+              </label>
+              <span class="rightalign">{{this.budget.cServicesRecived}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Materia primera</span>
+              </label>
+              <span class="rightalign">{{this.budget.cGoods}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Dietes</span>
+              </label>
+              <span class="rightalign">{{this.budget.cFoodDrinkSleep}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Transport/Desplaçament</span>
+              </label>
+              <span class="rightalign">{{this.budget.cTransport}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Altres</span>
+              </label>
+              <span class="rightalign">{{this.budget.cOthers}}</span>
+            </div>
+          <tr>
+            <th><h3>Lloguers</h3></th>
+          </tr>
+          <tr>
+            <div>
+              <label>
+                <span>Infraestructura</span>
+              </label>
+              <span class="rightalign">{{this.budget.rInfraestructures}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Mobiliari</span>
+              </label>
+              <span class="rightalign">{{this.budget.rForniture}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Altres</span>
+              </label>
+              <span class="rightalign">{{this.budget.rOthers}}</span>
+            </div>
+          <tr>
+            <th><h3>Contractacions</h3></th>
+          </tr>
+          <tr>
+            <div>
+              <label>
+                <span>Artistes</span>
+              </label>
+              <span class="rightalign">{{this.budget.hArtists}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Serveis</span>
+              </label>
+              <span class="rightalign">{{this.budget.hServices}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Equips de so/llum</span>
+              </label>
+              <span class="rightalign">{{this.budget.hLightSoundSystem}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Altres</span>
+              </label>
+              <span class="rightalign">{{this.budget.hOthers}}</span>
+            </div>
+          <tr>
+            <th><h3>Servei de barra</h3></th>
+          </tr>
+          <tr>
+            <div>
+              <label>
+                <span>Consumibles (beure, menjar, gel, ...)</span>
+              </label>
+              <span class="rightalign">{{this.budget.bGoods}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Gots</span>
+              </label>
+              <span class="rightalign">{{this.budget.bGlasses}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Equipament</span>
+              </label>
+              <span class="rightalign">{{this.budget.bForniture}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Tickets</span>
+              </label>
+              <span class="rightalign">{{this.budget.bTickets}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Altres</span>
+              </label>
+              <span class="rightalign">{{this.budget.bOthers}}</span>
+            </div>
+          <tr>
+            <th><h3>Activitats pròpies</h3></th>
+          </tr>
+          <tr>
+            <div>
+              <label>
+                <span>Pirotècnia</span>
+              </label>
+              <span class="rightalign">{{this.budget.maGoods}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Assegurança</span>
+              </label>
+              <span class="rightalign">{{this.budget.maInsurance}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Infraestructura</span>
+              </label>
+              <span class="rightalign">{{this.budget.maInsurance}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Materiar fungible</span>
+              </label>
+              <span class="rightalign">{{this.budget.maFungible}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Altres</span>
+              </label>
+              <span class="rightalign">{{this.budget.maOthers}}</span>
+            </div>
+          <tr>
+            <th><h3>Altres despeses</h3></th>
+          </tr>
+          <tr>
+            <div>
+              <label>
+                <span>Material fungible</span>
+              </label>
+              <span class="rightalign">{{this.budget.oFungible}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Acreditacions</span>
+              </label>
+              <span class="rightalign">{{this.budget.oAccreditationsAndStaff}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Assegurances</span>
+              </label>
+              <span class="rightalign">{{this.budget.oInsurance}}</span>
+            </div>
+            <div>
+              <label>
+                <span>Publicitat patrocinadors</span>
+              </label>
+              <span class="rightalign">{{this.budget.oSponsorsMarketing}}</span>
+            </div>
+            <div>
+              <div *ngIf="budget != null">* Aquest pressupost s'ha modificat per últim cop el dia {{this.budget.creationDate}}</div>
+              <div *ngIf=" budget == null">* Aquesta edició encara no te un pressupost assignat</div>
+            </div>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
+  <button type="button" (click)="onSubmit()"> Editar </button>
 </div>
+<app-budget-edit *ngIf="edit" [edition]="editionControl"></app-budget-edit>
+<button *ngIf="edit" type="button" class="btn btn-danger rightalign" (click)="editionControl=undefined">No guardar</button>
 
-<div *ngIf="budget != null">* Aquest pressupost s'ha modificat per últim cop el dia {{this.budget.creationDate}}</div>
-<div *ngIf=" budget == null">* Aquesta edició encara no te un pressupost assignat</div>
