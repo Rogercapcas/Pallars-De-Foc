@@ -11,14 +11,17 @@
           </thead>
           <tbody>
             <tr>
-              <th><h3>Fons Públics</h3></th>
+              <label>
+                <th><span><h3>Fons Públics</h3></span></th>
+              </label>
+              <span class="rightalign"><b>€</b></span>
             </tr>
             <tr>
               <div class="form-group">
                 <label>
                   <span>Subvencions</span>
                 </label>
-                <span class="rightalign"><input type = number class="form-control" formControlName="pfGrants" [defaultValue]="0"></span>
+                <span class="rightalign"><input type = number class="form-control" formControlName="pfGrants" [defaultValue]=this.budget.pfGrants></span>
               </div>
               <div class="form-group">
                 <label>

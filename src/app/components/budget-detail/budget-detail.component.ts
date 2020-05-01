@@ -16,6 +16,7 @@ export class BudgetDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.budget = this.edition.budget;
   }
 
   onSubmit() {

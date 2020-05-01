@@ -31,7 +31,7 @@ export class BudgetEditComponent implements OnInit {
       pcOthers: [this.edition.budget.pcOthers, Validators.required],
       sBar: [this.edition.budget.sBar, Validators.required],
       sMerchandising: [this.edition.budget.sMerchandising, Validators.required],
-      sTicketsQuotes: ['', Validators.required],
+      sTicketsQuotes: [this.edition.budget.sTicketsQuotes, Validators.required],
       sOthers: [this.edition.budget.sOthers, Validators.required],
       ownFunds: [this.edition.budget.ownFunds, Validators.required],
       dPosters: [this.edition.budget.dPosters, Validators.required],
@@ -92,7 +92,7 @@ export class BudgetEditComponent implements OnInit {
     console.log('hola');
     // console.log(this.budgetForm);
     console.log('Starting to fill the income attributes');
-    this.budget.setConcepts(this.budgetForm.value.pfGrants,
+    this.edition.budget.setConcepts(this.budgetForm.value.pfGrants,
       this.budgetForm.value.pfBills,
       this.budgetForm.value.pfOthers,
       this.budgetForm.value.pcCapital,
