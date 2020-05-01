@@ -6,14 +6,17 @@ import { EDITIONS } from '../data-sets/editions-set';
   providedIn: 'root'
 })
 export class EditionsSService {
-
-  constructor() { }
-
-  getEditions(): Edition[] {
-    return EDITIONS;
+  editions: Edition[];
+  constructor() {
+    this.editions = EDITIONS;
   }
 
-  getEditionYear(edition: Edition) {
-    return edition.year;
+  getEditions(): Edition[] {
+    return this.editions;
+  }
+
+  addEdition(ed: Edition) {
+    this.editions.push(ed);
+    // Falta passar aquesta llista d'edicións a "EDITIONS"
   }
 }
