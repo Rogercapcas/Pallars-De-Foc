@@ -23,6 +23,6 @@ export class BillsComponent implements OnInit {
 
   getBills(): void {
     this.bills = this.billService.getBills();
-}
+  }
 
 }

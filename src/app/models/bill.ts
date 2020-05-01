@@ -3,7 +3,6 @@ import { Edition } from './edition';
 
 export class Bill {
   public billNumber: number;
-  public edition: Edition;
   public date: Date;
   public from: Organization;
   public to: Organization;
@@ -11,12 +10,22 @@ export class Bill {
   public budgetConcept: string;
   public totalBT: number; /*Total Before Taxes*/
   public taxes: number;
-  public income: boolean; /* if its value is true means income, when its value is false means outcome*/
+  public income: boolean; /* if its value is true means income, when its value is false means outcome */
+  public paid: boolean;
   public comments?: string;
 
-  constructor(billNumber: number, edition: Edition, date: Date, from: Organization, to: Organization, concept: string, budgetConcept: string, totalBT: number, taxes: number, income: boolean, comments: string) {
+  constructor(billNumber: number,
+              date: Date,
+              from: Organization,
+              to: Organization,
+              concept: string,
+              budgetConcept: string,
+              totalBT: number,
+              taxes: number,
+              income: boolean,
+              paid: boolean,
+              comments: string) {
     this.billNumber = billNumber;
-    this.edition = edition;
     this.date = date;
     this.from = from;
     this.to = to;
@@ -25,6 +34,7 @@ export class Bill {
     this.totalBT = totalBT;
     this.taxes = taxes;
     this.income = income;
+    this.paid = paid;
     this.comments = comments;
   }
 }
