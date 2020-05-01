@@ -1,13 +1,74 @@
-<nav class="navbar navbar-dark bg-primary navbar-fixed-left">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="budgetdetail">Pressupost <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown ">
+        <a class="nav-link dropdown-toggle" href="#" id="inOutcomesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Ingressos i despeses
+        </a>
+        <div class="dropdown-menu" aria-labelledby="inOutcomesDropdown">
+          <a class="dropdown-item" href="billinput">Entrar factura</a>
+          <a class="dropdown-item" href="bills">Consultar ingressos i despeses</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Justificar subvencions</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown ">
+        <a class="nav-link dropdown-toggle" href="#" id="demonOrganizationsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Colles de diables
+        </a>
+        <div class="dropdown-menu" aria-labelledby="demonOrganizationsDropdown">
+          <a class="dropdown-item" href="organizations">Consultar dades</a>
+          <a class="dropdown-item" href="">Consultar colles assistents</a> <!--S?HA DE FER I CONTROLAR NO+ les que assisteixen a l'edició-->
+        </div>
+      </li>
+      <li class="nav-item dropdown ">
+        <a class="nav-link dropdown-toggle" href="#" id="ppOrganizationsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Empreses i administració pública
+        </a>
+        <div class="dropdown-menu" aria-labelledby="ppOrganizationsDropdown">
+          <a class="dropdown-item" href="#">Consultar dades</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Donar d'alta</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="users">Contactes interns</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index">Canviar d'edició</a>
+      </li>
+    </ul>
+    <button class="btn btn-outline-light" > Desconnecta't </button>
+  </div>
+</nav>
+
+<!--<nav class="navbar navbar-dark bg-primary navbar-fixed-left">
   <ul class="navbar-nav">
     <div class="btn-group">
-      <li class="nav-item"><a class="btn btn-primary nav-link" >Pressupostos</a></li>
-      <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="sr-only">Toggle Dropdown</span>
-      </button>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="budgetinput">Crear un pressupost</a>
-        <a class="dropdown-item" href="budgetdetail">Consultar pressupostos</a>
+      <div class="dropdown dropright">
+        <button type="button" class="btn btn-primary nav-link" routerLink="budgetdetail">
+          Pressupost
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="budgetdetail">Consultar/editar</a>
+        </div>
+      </div>
+    </div>
+    <div class="btn-group">
+      <div class="dropdown dropright">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+          Ingressos i despeses
+        </button>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="billinput">Entrar factura</a>
+          <a class="dropdown-item" href="#">Entrar altre ingrès/despesa</a> ==> AIXÒ ENCARA FALTA
+          <a class="dropdown-item" href="bills">Consultar ingressos i despeses</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Justificar subvencions</a>
+        </div>
       </div>
     </div>
     <div class="btn-group">
@@ -30,9 +91,9 @@
       </button>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="/">Colles confirmades</a>
-        <a class="dropdown-item" href="organizations">Llista totes les colles</a><!-- S'HA DE PODER PASSAR PARÁMETRE "TIPUS COLLA DIABLES"-->
+        <a class="dropdown-item" href="organizations">Llista totes les colles</a>
         <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="organizations">Llista totes les entitats públiques i privades</a><!-- S'HA DE PODER PASSAR PARÁMETRE "TIPUS != COLLA DIABLES"-->
+        <a class="dropdown-item" href="organizations">Llista totes les entitats públiques i privades</a>
         <a class="dropdown-item" href="orginput">Introduïr nova entitat</a>
       </div>
     </div>
@@ -43,4 +104,4 @@
   <div>
     <button class="btn btn-dark" > Desconnecta't </button>
   </div>
-</nav>
+</nav>-->

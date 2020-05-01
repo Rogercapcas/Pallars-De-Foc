@@ -11,10 +11,7 @@
           </thead>
           <tbody>
             <tr>
-              <label>
-                <th><span><h3>Fons Públics</h3></span></th>
-              </label>
-              <span class="rightalign"><b>€</b></span>
+              <th><span><h3>Fons Públics</h3></span></th>
             </tr>
             <tr>
               <div class="form-group">
@@ -27,13 +24,13 @@
                 <label>
                   <span>Factures</span>
                 </label>
-                <span class="rightalign"><input type = number class="form-control" formControlName="pfBills" [defaultValue]="0"></span>
+                <span class="rightalign"><input type = number class="form-control" formControlName="pfBills" [defaultValue]=this.budget.pfBills></span>
               </div>
               <div class="form-group">
                 <label>
                   <span>Altres</span>
                 </label>
-                <span class="rightalign"><input type = number class="form-control" formControlName="pfOthers" [defaultValue]="0"></span>
+                <span class="rightalign"><input type = number class="form-control" formControlName="pfOthers" [defaultValue]=this.budget.pfOthers></span>
               </div>
             </tr>
             <tr>
@@ -44,19 +41,19 @@
                 <label>
                   <span>Aportacions de capital (p.e.: patrocinadors)</span>
                 </label>
-                <span class="rightalign"><input type = number class="form-control" formControlName="pcCapital" [defaultValue]="0"></span>
+                <span class="rightalign"><input type = number class="form-control" formControlName="pcCapital" [defaultValue]=this.budget.pcCapital></span>
               </div>
               <div class="form-group">
                 <label>
                   <span>Espècies</span>
                 </label>
-                <span class="rightalign"><input type = number class="form-control" formControlName="pcKind" [defaultValue]="0"></span>
+                <span class="rightalign"><input type = number class="form-control" formControlName="pcKind" [defaultValue]=this.budget.pcKind></span>
               </div>
               <div class="form-group">
                 <label>
                   <span>Altres</span>
                 </label>
-                <span class="rightalign"><input type = number class="form-control" formControlName="pcOthers" [defaultValue]="0"></span>
+                <span class="rightalign"><input type = number class="form-control" formControlName="pcOthers" [defaultValue]=this.budget.pcOthers></span>
               </div>
             </tr>
             <tr>
@@ -67,25 +64,25 @@
                 <label>
                   <span>Servei de barra</span>
                 </label>
-                <span class="rightalign"><input type = number class="form-control" formControlName="sBar" [defaultValue]="0"></span>
+                <span class="rightalign"><input type = number class="form-control" formControlName="sBar" [defaultValue]=this.budget.sBar></span>
               </div>
               <div class="form-group">
                 <label>
                   <span>Merchandising</span>
                 </label>
-                <span class="rightalign"><input type = number class="form-control" formControlName="sMerchandising" [defaultValue]="0"></span>
+                <span class="rightalign"><input type = number class="form-control" formControlName="sMerchandising" [defaultValue]=this.budget.sMerchandising></span>
               </div>
               <div class="form-group">
                 <label>
                   <span>Entrades/Quotes</span>
                 </label>
-                <span class="rightalign"><input type = number class="form-control" formControlName="sTicketsQuotes" [defaultValue]="0"></span>
+                <span class="rightalign"><input type = number class="form-control" formControlName="sTicketsQuotes" [defaultValue]=this.budget.sTicketsQuotes></span>
               </div>
               <div class="form-group">
                 <label>
                   <span>Altres</span>
                 </label>
-                <span class="rightalign"><input type = number class="form-control" formControlName="sOthers" [defaultValue]="0"></span>
+                <span class="rightalign"><input type = number class="form-control" formControlName="sOthers" [defaultValue]=this.budget.sOthers></span>
               </div>
             </tr>
             <tr>
@@ -96,7 +93,7 @@
                 <label>
                   <span>Aportació de fons propis</span>
                 </label>
-                <span class="rightalign"><input type = number class="form-control" formControlName="ownFunds" [defaultValue]="0"></span>
+                <span class="rightalign"><input type = number class="form-control" formControlName="ownFunds" [defaultValue]=this.budget.ownFunds></span>
               </div>
             </tr>
           </tbody>
@@ -118,49 +115,49 @@
               <label>
                 <span>Cartelleria</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="dPosters" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="dPosters" [defaultValue]=this.budget.dPosters></span>
             </div>
             <div class="form-group">
               <label>
                 <span>Disseny/Edició</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="dDesign" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="dDesign" [defaultValue]=this.budget.dDesign></span>
             </div>
             <div class="form-group">
               <label>
                 <span>Mitjans de comunicació digitals</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="dDigitalMedia" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="dDigitalMedia" [defaultValue]=this.budget.dDigitalMedia></span>
             </div>
             <div class="form-group">
               <label>
                 <span>Mitjans de comunicació tradicionas</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="dTraditionalMedia" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="dTraditionalMedia" [defaultValue]=this.budget.dTraditionalMedia></span>
             </div>
             <div class="form-group">
               <label>
                 <span>Merchandising</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="dMerchandising" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="dMerchandising" [defaultValue]=this.budget.dMerchandising></span>
             </div>
             <div class="form-group">
               <label>
                 <span>Obsequis/records/premis</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="dGiftsSouvenirsPrizes" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="dGiftsSouvenirsPrizes" [defaultValue]=this.budget.dGiftsSouvenirsPrizes></span>
             </div>
             <div class="form-group">
               <label>
                 <span>Disseny i manteniment web</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="dWeb" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="dWeb" [defaultValue]=this.budget.dWeb></span>
             </div>
             <div class="form-group">
               <label>
                 <span>Altres</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="dOthers" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="dOthers" [defaultValue]=this.budget.dOthers></span>
             </div>
           </tr>
           <tr>
@@ -171,31 +168,31 @@
               <label>
                 <span>Per prestació de servei aliè</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="cServicesRecived" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="cServicesRecived" [defaultValue]=this.budget.cServicesRecived></span>
             </div>
             <div class="form-group">
               <label>
                 <span>Materia primera</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="cGoods" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="cGoods" [defaultValue]=this.budget.cGoods></span>
             </div>
             <div class="form-group">
               <label>
                 <span>Dietes</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="cFoodDrinkSleep" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="cFoodDrinkSleep" [defaultValue]=this.budget.cFoodDrinkSleep></span>
             </div>
             <div class="form-group">
               <label>
                 <span>Transport/Desplaçament</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="cTransport" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="cTransport" [defaultValue]=this.budget.cTransport></span>
             </div>
             <div class="form-group">
               <label>
                 <span>Altres</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="cOthers" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="cOthers" [defaultValue]=this.budget.cOthers></span>
             </div>
           <tr>
             <th><h3>Lloguers</h3></th>
@@ -205,19 +202,19 @@
               <label>
                 <span>Infraestructura</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="rInfraestructures" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="rInfraestructures" [defaultValue]=this.budget.rInfraestructures></span>
             </div>
             <div class="form-group">
               <label>
                 <span>Mobiliari</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="rForniture" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="rForniture" [defaultValue]=this.budget.rForniture></span>
             </div>
             <div class="form-group">
               <label>
                 <span>Altres</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="rOthers" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="rOthers" [defaultValue]=this.budget.rOthers></span>
             </div>
           <tr>
             <th><h3>Contractacions</h3></th>
@@ -227,25 +224,25 @@
               <label>
                 <span>Artistes</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="hArtists" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="hArtists" [defaultValue]=this.budget.hArtists></span>
             </div>
             <div class="form-group">
               <label>
                 <span>Serveis</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="hServices" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="hServices" [defaultValue]=this.budget.hServices></span>
             </div>
             <div class="form-group">
               <label>
                 <span>Equips de so/llum</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="hLightSoundSystem" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="hLightSoundSystem" [defaultValue]=this.budget.hLightSoundSystem></span>
             </div>
             <div class="form-group">
               <label>
                 <span>Altres</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="hOthers" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="hOthers" [defaultValue]=this.budget.hOthers></span>
             </div>
           <tr>
             <th><h3>Servei de barra</h3></th>
@@ -255,31 +252,31 @@
               <label>
                 <span>Consumibles (beure, menjar, gel, ...)</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="bGoods" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="bGoods" [defaultValue]=this.budget.bGoods></span>
             </div>
             <div class="form-group">
               <label>
                 <span>Gots</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="bGlasses" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="bGlasses" [defaultValue]=this.budget.bGlasses></span>
             </div>
             <div class="form-group">
               <label>
                 <span>Equipament</span>
               </label>
-              <span class="rightalign"><input type = number  class="form-control" formControlName="bForniture" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number  class="form-control" formControlName="bForniture" [defaultValue]=this.budget.bForniture></span>
             </div>
             <div class="form-group">
               <label>
                 <span>Tickets</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="bTickets" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="bTickets" [defaultValue]=this.budget.bTickets></span>
             </div>
             <div class="form-group">
               <label>
                 <span>Altres</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="bOthers" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="bOthers" [defaultValue]=this.budget.bOthers></span>
             </div>
           <tr>
             <th><h3>Activitats pròpies</h3></th>
@@ -289,31 +286,31 @@
               <label>
                 <span>Pirotècnia</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="maGoods" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="maGoods" [defaultValue]=this.budget.maGoods></span>
             </div>
             <div class="form-group">
               <label>
                 <span>Assegurança</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="maInsurance" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="maInsurance" [defaultValue]=this.budget.maInsurance></span>
             </div>
             <div class="form-group">
               <label>
                 <span>Infraestructura</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="maInfraestructure" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="maInfraestructure" [defaultValue]=this.budget.maInfraestructure></span>
             </div>
             <div class="form-group">
               <label>
                 <span>Materiar fungible</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="maFungible" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="maFungible" [defaultValue]=this.budget.maFungible></span>
             </div>
             <div class="form-group">
               <label>
                 <span>Altres</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="maOthers" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="maOthers" [defaultValue]=this.budget.maOthers></span>
             </div>
           <tr>
             <th><h3>Altres despeses</h3></th>
@@ -323,25 +320,25 @@
               <label>
                 <span>Material fungible</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="oFungible" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="oFungible" [defaultValue]=this.budget.oFungible></span>
             </div>
             <div class="form-group">
               <label>
                 <span>Acreditacions</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="oAccreditationsAndStaff" [defaultValue]=0></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="oAccreditationsAndStaff" [defaultValue]=this.budget.oAccreditationsAndStaff></span>
             </div>
             <div class="form-group">
               <label>
                 <span>Assegurances</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="oInsurance" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="oInsurance" [defaultValue]=this.budget.oInsurance></span>
             </div>
             <div class="form-group">
               <label>
                 <span>Publicitat patrocinadors</span>
               </label>
-              <span class="rightalign"><input type = number class="form-control" formControlName="oSponsorsMarketing" [defaultValue]="0"></span>
+              <span class="rightalign"><input type = number class="form-control" formControlName="oSponsorsMarketing" [defaultValue]=this.budget.oSponsorsMarketing></span>
             </div>
           </tbody>
         </table>

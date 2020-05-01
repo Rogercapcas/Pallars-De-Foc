@@ -352,6 +352,5 @@
   <button type="button" (click)="onSubmit()"> Editar </button>
 </div>
 <app-budget-edit *ngIf="edit" [edition]="editionControl"></app-budget-edit>
-<button *ngIf="edit" type="button" class="btn btn-danger rightalign" (click)="this.edit=false">No guardar</button>
-
-
+<br>
+<button *ngIf="edit" type="button" class="btn btn-danger" (click)="this.edit=false">Tornar al pressupost</button>

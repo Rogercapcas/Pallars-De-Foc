@@ -262,13 +262,13 @@ export class Budget {
     // Group 7: Rentals (r)
     this.r = this.rInfraestructures + this.rForniture + this.rOthers;
     // Group 8: Hiring (h) ==> Contractacions
-    this.h = this.hArtists + this.hServices + this.hLightSoundSystem + this.hOthers
+    this.h = this.hArtists + this.hServices + this.hLightSoundSystem + this.hOthers;
     // Group 9: Bar service (b)
     this.b = this.bGoods + this.bGlasses + this.bForniture + this.bTickets + this.bOthers;
     // Group 10: Main activity (ma)
     this.ma = this.maOthers + this.maGoods + this.maInfraestructure + this.maInsurance + this.maFungible;
     // Group 11: Others (o)
-    this.o = this.oInsurance + this.oFungible +this.oSponsorsMarketing + this.oAccreditationsAndStaff;
+    this.o = this.oInsurance + this.oFungible + this.oSponsorsMarketing + this.oAccreditationsAndStaff;
     this.modificationDate = new Date();
     // ttal outcomes
     this.OUTCOMES = this.d + this.c + this.r + this.h + this.b + this.ma + this.o;
