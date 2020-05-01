@@ -18,7 +18,6 @@ export class BillInputComponent implements OnInit {
   ngOnInit() {
     this.billForm = this.fb.group({
       billNumber: ['', Validators.required],
-      edition: ['', Validators.required],
       date: ['', Validators.required],
       from: ['', Validators.required],
       toorg: ['', Validators.required],
@@ -26,6 +25,7 @@ export class BillInputComponent implements OnInit {
       totalBT: ['', Validators.required],
       taxes: ['', Validators.required],
       income: [false],
+      paid: [false, Validators.required],
       comments: ['']
     });
   }
