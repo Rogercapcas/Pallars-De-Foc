@@ -57,7 +57,7 @@
             </div>
           </tr>
           <tr>
-            <th><h3>Venda {{this.edition.budget.s}}</h3></th>
+            <th><h3>Venda {{this.edition.budget.s}} €</h3></th>
           </tr>
           <tr>
             <div>
@@ -91,7 +91,7 @@
           <tr>
             <div>
               <label>
-                <span>Aportació de fons propis</span>
+                <span>Aportació de fons propis {{this.budget.ownFunds}} €</span>
               </label>
               <span class="rightalign">{{this.budget.ownFunds}} €</span>
             </div>
@@ -103,12 +103,12 @@
         <table class="table table-striped">
           <thead class="redhead">
           <tr>
-            <th>Despeses</th>
+            <th>Despeses {{this.budget.OUTCOMES}} €</th>
           </tr>
           </thead>
           <tbody>
           <tr>
-            <th><h3>Difusió</h3></th>
+            <th><h3>Difusió {{this.budget.d}} €</h3></th>
           </tr>
           <tr>
             <div>
@@ -161,7 +161,7 @@
             </div>
           </tr>
           <tr>
-            <th><h3>Compensasions</h3></th>
+            <th><h3>Compensasions {{this.budget.c}} €</h3></th>
           </tr>
           <tr>
             <div>
@@ -195,7 +195,7 @@
               <span class="rightalign">{{this.budget.cOthers}} €</span>
             </div>
           <tr>
-            <th><h3>Lloguers</h3></th>
+            <th><h3>Lloguers {{this.budget.r}} €</h3></th>
           </tr>
           <tr>
             <div>
@@ -217,7 +217,7 @@
               <span class="rightalign">{{this.budget.rOthers}} €</span>
             </div>
           <tr>
-            <th><h3>Contractacions</h3></th>
+            <th><h3>Contractacions {{this.budget.h}} €</h3></th>
           </tr>
           <tr>
             <div>
@@ -245,7 +245,7 @@
               <span class="rightalign">{{this.budget.hOthers}} €</span>
             </div>
           <tr>
-            <th><h3>Servei de barra</h3></th>
+            <th><h3>Servei de barra {{this.budget.s}} €</h3></th>
           </tr>
           <tr>
             <div>
@@ -279,7 +279,7 @@
               <span class="rightalign">{{this.budget.bOthers}} €</span>
             </div>
           <tr>
-            <th><h3>Activitats pròpies</h3></th>
+            <th><h3>Activitats pròpies {{this.budget.ma}} €</h3></th>
           </tr>
           <tr>
             <div>
@@ -313,7 +313,7 @@
               <span class="rightalign">{{this.budget.maOthers}} €</span>
             </div>
           <tr>
-            <th><h3>Altres despeses</h3></th>
+            <th><h3>Altres despeses {{this.budget.o}} €</h3></th>
           </tr>
           <tr>
             <div>

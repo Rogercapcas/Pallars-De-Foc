@@ -148,6 +148,7 @@ export class Budget {
     this.oFungible = 0;
     this.oSponsorsMarketing = 0;
     this.oAccreditationsAndStaff = 0;
+    this.setTotals();
   }
 
   setConcepts(pfGrants: number,
@@ -240,6 +241,10 @@ export class Budget {
     this.oFungible = oFungible;
     this.oSponsorsMarketing = oSponsorsMarketing;
     this.oAccreditationsAndStaff = oAccreditationsAndStaff;
+    this.setTotals();
+  }
+
+  setTotals() {
     // Totals
     // Group 1: public founds (pf)
     this.pf = this.pfGrants + this.pfBills + this.pfOthers;
@@ -248,7 +253,7 @@ export class Budget {
     // Group 3: sells (s)
     this.s = this.sBar + this.sMerchandising + this.sTicketsQuotes + this.sOthers;
     // ttal incomes
-    this.INCOMES = this.pf + this.pc + this.s;
+    this.INCOMES = this.pf + this.pc + this.s + this.ownFunds;
     // OUTCOMES
     // Group 5: difusió (d)
     this.d = this.dPosters + this.dDigitalMedia + this.dDesign + this.dTraditionalMedia + this.dMerchandising + this.dGiftsSouvenirsPrizes + this.dWeb + this.dOthers;
@@ -267,5 +272,6 @@ export class Budget {
     this.modificationDate = new Date();
     // ttal outcomes
     this.OUTCOMES = this.d + this.c + this.r + this.h + this.b + this.ma + this.o;
+    this.totalAmount = this.INCOMES - this.OUTCOMES;
   }
 }
