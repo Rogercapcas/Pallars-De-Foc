@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { Bill } from '../../models/bill';
 import { BillService } from '../../services/bill.service';
+import { Edition } from '../../models/edition';
 
 @Component({
   selector: 'app-bills',
@@ -8,8 +9,9 @@ import { BillService } from '../../services/bill.service';
   styleUrls: ['./bills.component.css']
 })
 export class BillsComponent implements OnInit {
-  bills: Bill[];
-  selectedBill: Bill;
+  @Input() edition: Edition = new Edition(2020, 'V');
+  public bills: Bill[];
+  public selectedBill: Bill;
 
   constructor(private billService: BillService) { }
 
@@ -22,7 +24,8 @@ export class BillsComponent implements OnInit {
   }
 
   getBills(): void {
-    this.bills = this.billService.getBills();
+    this.edition.bills = this.billService.getBills();
+    this.bills = this.edition.bills;
   }
 
 }

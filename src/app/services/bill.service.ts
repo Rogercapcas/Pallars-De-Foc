@@ -1,15 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Bill } from '../models/bill';
+import {BILLS} from '../data-sets/bills-set';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BillService {
-  private BILLS: Bill[];
+  private Bills: Bill[];
 
-  constructor() { }
+  constructor() {
+    this.Bills = BILLS;
+  }
 
   getBills(): Bill[] {
-    return this.BILLS;
+    return this.Bills;
   }
 }

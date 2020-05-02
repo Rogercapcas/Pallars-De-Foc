@@ -15,6 +15,14 @@ export class EditionsSService {
     return this.editions;
   }
 
+  getEditionYear(year: number): Edition {
+    for (const edition of this.editions) {
+      if (edition.year === year) {
+        return edition;
+      }
+    }
+  }
+
   addEdition(ed: Edition) {
     this.editions.push(ed);
     // Falta passar aquesta llista d'edicións a "EDITIONS"

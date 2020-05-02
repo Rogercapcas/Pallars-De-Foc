@@ -12,6 +12,7 @@
             <tr *ngFor="let bill of bills"
                 [class.selected]="bill === selectedBill"
                 (click)="onSelect(bill)">
+               <span *ngIf="bill.from.NIF == '111111111' && bill.paid==true"> {{bill.to.name}} </span>
             </tr>
           </tbody>
         </table>
@@ -24,7 +25,11 @@
           </tr>
           </thead>
           <tbody>
-
+          <tr *ngFor="let bill of bills"
+              [class.selected]="bill === selectedBill"
+              (click)="onSelect(bill)">
+            <span *ngIf="bill.from.NIF != '111111111'"> {{bill.from.name}} </span>
+          </tr>
           </tbody>
         </table>
       </div>
